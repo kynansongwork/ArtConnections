@@ -16,7 +16,7 @@ enum BaseTransitionRef: TransitionRef {
 class AppCoordinator: BaseCoordinator {
     
     init() {
-        let viewController = ProfileViewController.instantiateFromStoryBoard(storyboard: .Profile, with: ProfileViewModel())
+        let viewController = ProfileViewController.instantiateFromStoryBoard(storyboard: .Main, with: ProfileViewModel())
         super.init(rootViewController: viewController)
     }
     

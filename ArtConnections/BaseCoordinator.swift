@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 enum StoryboardRef: String {
+    case Main
     case Profile
     case Login
 }

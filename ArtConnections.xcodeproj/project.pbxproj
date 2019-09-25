@@ -20,6 +20,7 @@
 		EDAF29C8233BAE39007EB1C1 /* StoryboardLoadedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29C7233BAE39007EB1C1 /* StoryboardLoadedViewController.swift */; };
 		EDAF29CA233BB3CC007EB1C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29C9233BB3CC007EB1C1 /* ProfileViewController.swift */; };
 		EDAF29CC233BB447007EB1C1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29CB233BB447007EB1C1 /* ProfileViewModel.swift */; };
+		EDAF29CE233BB6AC007EB1C1 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		EDAF29C7233BAE39007EB1C1 /* StoryboardLoadedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadedViewController.swift; sourceTree = "<group>"; };
 		EDAF29C9233BB3CC007EB1C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EDAF29CB233BB447007EB1C1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginCoordinator.swift; path = Coordinators/LoginCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				EDAF29BC233BAAC2007EB1C1 /* ProfileCoordinator.swift */,
 				EDAF29BF233BAB45007EB1C1 /* AppCoordinator.swift */,
 				EDAF29C1233BABB7007EB1C1 /* BaseCoordinator.swift */,
+				EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */,
 			);
 			name = Coordinators;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				EDAF29C4233BAC7F007EB1C1 /* ModelledViewController.swift in Sources */,
 				EDAF29C2233BABB7007EB1C1 /* BaseCoordinator.swift in Sources */,
 				EDAF29C0233BAB45007EB1C1 /* AppCoordinator.swift in Sources */,
+				EDAF29CE233BB6AC007EB1C1 /* LoginCoordinator.swift in Sources */,
 				EDAF29CC233BB447007EB1C1 /* ProfileViewModel.swift in Sources */,
 				EDAF29AB233BAA31007EB1C1 /* ViewController.swift in Sources */,
 				EDAF29BD233BAAC2007EB1C1 /* ProfileCoordinator.swift in Sources */,
