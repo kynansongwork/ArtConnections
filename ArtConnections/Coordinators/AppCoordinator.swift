@@ -11,6 +11,7 @@ import UIKit
 
 enum BaseTransitionRef: TransitionRef {
     case Login
+    case Profile
 }
 
 class AppCoordinator: BaseCoordinator {
@@ -27,6 +28,8 @@ class AppCoordinator: BaseCoordinator {
         
         switch transition {
         case .Login:
+            break
+        case .Profile:
             break
         default:
             break

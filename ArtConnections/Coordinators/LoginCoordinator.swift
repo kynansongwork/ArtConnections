@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+enum LoginRef: TransitionRef {
+    case Login
+    case Profile
+}
+
+class LoginCoordinator: BaseCoordinator {
+    
+}
+
+extension LoginCoordinator {
+    
+}

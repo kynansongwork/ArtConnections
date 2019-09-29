@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24317062234137DD00AA4A6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24317061234137DD00AA4A6D /* LoginViewController.swift */; };
 		EDAF29A9233BAA31007EB1C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29A8233BAA31007EB1C1 /* AppDelegate.swift */; };
 		EDAF29AB233BAA31007EB1C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29AA233BAA31007EB1C1 /* ViewController.swift */; };
 		EDAF29AE233BAA31007EB1C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAF29AC233BAA31007EB1C1 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24317061234137DD00AA4A6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDAF29A5233BAA31007EB1C1 /* ArtConnections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtConnections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAF29A8233BAA31007EB1C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDAF29AA233BAA31007EB1C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2431705F234137BF00AA4A6D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EDAF29C9233BB3CC007EB1C1 /* ProfileViewController.swift */,
+				EDAF29CB233BB447007EB1C1 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		24317060234137C900AA4A6D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				24317061234137DD00AA4A6D /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		EDAF299C233BAA31007EB1C1 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +118,8 @@
 		EDAF29BB233BAA4C007EB1C1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				EDAF29C9233BB3CC007EB1C1 /* ProfileViewController.swift */,
-				EDAF29CB233BB447007EB1C1 /* ProfileViewModel.swift */,
+				24317060234137C900AA4A6D /* Login */,
+				2431705F234137BF00AA4A6D /* Profile */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -186,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24317062234137DD00AA4A6D /* LoginViewController.swift in Sources */,
 				EDAF29C8233BAE39007EB1C1 /* StoryboardLoadedViewController.swift in Sources */,
 				EDAF29C4233BAC7F007EB1C1 /* ModelledViewController.swift in Sources */,
 				EDAF29C2233BABB7007EB1C1 /* BaseCoordinator.swift in Sources */,
