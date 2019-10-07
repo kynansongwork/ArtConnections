@@ -19,4 +19,8 @@ class LoginCoordinator: BaseCoordinator {
 
 extension LoginCoordinator {
     
+    func showProfilePage() {
+        let controller = ProfileViewController.instantiateFromStoryBoard(storyboard: .Main, with: ProfileViewModel())
+        self.show(controller)
+    }
 }

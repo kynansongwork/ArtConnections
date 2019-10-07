@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24317062234137DD00AA4A6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24317061234137DD00AA4A6D /* LoginViewController.swift */; };
+		EDADDE35234B2BB400DA614D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDADDE34234B2BB400DA614D /* LoginViewModel.swift */; };
 		EDAF29A9233BAA31007EB1C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29A8233BAA31007EB1C1 /* AppDelegate.swift */; };
 		EDAF29AB233BAA31007EB1C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29AA233BAA31007EB1C1 /* ViewController.swift */; };
 		EDAF29AE233BAA31007EB1C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAF29AC233BAA31007EB1C1 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		24317061234137DD00AA4A6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EDADDE34234B2BB400DA614D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EDAF29A5233BAA31007EB1C1 /* ArtConnections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtConnections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAF29A8233BAA31007EB1C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDAF29AA233BAA31007EB1C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				24317061234137DD00AA4A6D /* LoginViewController.swift */,
+				EDADDE34234B2BB400DA614D /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				EDAF29CE233BB6AC007EB1C1 /* LoginCoordinator.swift in Sources */,
 				EDAF29CC233BB447007EB1C1 /* ProfileViewModel.swift in Sources */,
 				EDAF29AB233BAA31007EB1C1 /* ViewController.swift in Sources */,
+				EDADDE35234B2BB400DA614D /* LoginViewModel.swift in Sources */,
 				EDAF29BD233BAAC2007EB1C1 /* ProfileCoordinator.swift in Sources */,
 				EDAF29CA233BB3CC007EB1C1 /* ProfileViewController.swift in Sources */,
 				EDAF29A9233BAA31007EB1C1 /* AppDelegate.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController, StoryboardLoadedViewController {
     
-    var viewModel: ViewModel!
+    var viewModel: LoginViewModel!
     
     @IBOutlet weak var signInButton: UIButton!
     
