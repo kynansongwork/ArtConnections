@@ -23,6 +23,8 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // save image in user-defaults or as a file on directory
     }
 
 }

@@ -20,5 +20,8 @@ class LoginViewController: UIViewController, StoryboardLoadedViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func signInTapped(_ sender: Any) {
+        viewModel.coordinator?.transition(LoginRef.Profile)
+    }
+    
 }

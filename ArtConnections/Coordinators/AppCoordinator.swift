@@ -11,14 +11,13 @@ import UIKit
 
 enum BaseTransitionRef: TransitionRef {
     case Login
-    case Profile
 }
 
 class AppCoordinator: BaseCoordinator {
     
     init() {
         //let viewController = ProfileViewController.instantiateFromStoryBoard(storyboard: .Main, with: ProfileViewModel())
-        let viewController = LoginViewController.instantiateFromStoryBoard(storyboard: .Main, with: LoginViewModel())
+        let viewController = WelcomeViewController.instantiateFromStoryBoard(storyboard: .Main, with: ViewModel())
         super.init(rootViewController: viewController)
     }
     
@@ -29,9 +28,7 @@ class AppCoordinator: BaseCoordinator {
         
         switch transition {
         case .Login:
-            break
-        case .Profile:
-            break
+            presentLoginFlow()
         default:
             break
         }
@@ -40,5 +37,9 @@ class AppCoordinator: BaseCoordinator {
 
 extension AppCoordinator {
     
-    //Insert case methods here
+    func presentLoginFlow() {
+        let loginCoordinator = LoginCoordinator()
+        //loginCoordinator.delegate = self
+        try? present(loginCoordinator)
+    }
 }

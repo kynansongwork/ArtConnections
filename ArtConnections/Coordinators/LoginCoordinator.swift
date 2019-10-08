@@ -15,6 +15,23 @@ enum LoginRef: TransitionRef {
 
 class LoginCoordinator: BaseCoordinator {
     
+    required init () {
+        let viewController = LoginViewController.instantiateFromStoryBoard(storyboard: .Main, with: LoginViewModel())
+        super.init(rootViewController: viewController)
+    }
+    override func transition(_ transition: TransitionRef) {
+        guard let transition = transition as? LoginRef else {
+            return
+        }
+        
+        switch transition {
+        case .Profile:
+            showProfilePage()
+        default:
+            break
+        }
+    }
+    
 }
 
 extension LoginCoordinator {
