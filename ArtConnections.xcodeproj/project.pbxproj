@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		24317062234137DD00AA4A6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24317061234137DD00AA4A6D /* LoginViewController.swift */; };
 		ED56861C234CDC890003A160 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861B234CDC890003A160 /* WelcomeViewController.swift */; };
+		ED56861F234E19F40003A160 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861E234E19F40003A160 /* SignUpViewController.swift */; };
+		ED568621234E1A1D0003A160 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED568620234E1A1D0003A160 /* SignUpViewModel.swift */; };
 		EDADDE35234B2BB400DA614D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDADDE34234B2BB400DA614D /* LoginViewModel.swift */; };
 		EDAF29A9233BAA31007EB1C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29A8233BAA31007EB1C1 /* AppDelegate.swift */; };
 		EDAF29AB233BAA31007EB1C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29AA233BAA31007EB1C1 /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		24317061234137DD00AA4A6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED56861B234CDC890003A160 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		ED56861E234E19F40003A160 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		ED568620234E1A1D0003A160 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		EDADDE34234B2BB400DA614D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EDAF29A5233BAA31007EB1C1 /* ArtConnections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtConnections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAF29A8233BAA31007EB1C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,15 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		ED56861D234E15EB0003A160 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				ED56861E234E19F40003A160 /* SignUpViewController.swift */,
+				ED568620234E1A1D0003A160 /* SignUpViewModel.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
 		EDAF299C233BAA31007EB1C1 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +144,7 @@
 		EDAF29BB233BAA4C007EB1C1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				ED56861D234E15EB0003A160 /* Sign Up */,
 				ED568618234CDC590003A160 /* Welcome */,
 				24317060234137C900AA4A6D /* Login */,
 				2431705F234137BF00AA4A6D /* Profile */,
@@ -221,6 +235,7 @@
 			files = (
 				24317062234137DD00AA4A6D /* LoginViewController.swift in Sources */,
 				EDAF29C8233BAE39007EB1C1 /* StoryboardLoadedViewController.swift in Sources */,
+				ED568621234E1A1D0003A160 /* SignUpViewModel.swift in Sources */,
 				EDAF29C4233BAC7F007EB1C1 /* ModelledViewController.swift in Sources */,
 				EDAF29C2233BABB7007EB1C1 /* BaseCoordinator.swift in Sources */,
 				EDAF29C0233BAB45007EB1C1 /* AppCoordinator.swift in Sources */,
@@ -228,6 +243,7 @@
 				EDAF29CC233BB447007EB1C1 /* ProfileViewModel.swift in Sources */,
 				EDAF29AB233BAA31007EB1C1 /* ViewController.swift in Sources */,
 				EDADDE35234B2BB400DA614D /* LoginViewModel.swift in Sources */,
+				ED56861F234E19F40003A160 /* SignUpViewController.swift in Sources */,
 				EDAF29BD233BAAC2007EB1C1 /* ProfileCoordinator.swift in Sources */,
 				EDAF29CA233BB3CC007EB1C1 /* ProfileViewController.swift in Sources */,
 				EDAF29A9233BAA31007EB1C1 /* AppDelegate.swift in Sources */,

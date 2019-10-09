@@ -21,7 +21,12 @@ class LoginViewController: UIViewController, StoryboardLoadedViewController {
     }
     
     @IBAction func signInTapped(_ sender: Any) {
+        //Navigate to login flow
         viewModel.coordinator?.transition(LoginRef.Profile)
     }
     
+    @IBAction func signUpTapped(_ sender: Any) {
+        //Navigate to onboarding flow
+        viewModel.coordinator?.transition(LoginRef.SignUp)
+    }
 }

@@ -11,6 +11,7 @@ import Foundation
 enum LoginRef: TransitionRef {
     case Login
     case Profile
+    case SignUp
 }
 
 class LoginCoordinator: BaseCoordinator {
@@ -27,6 +28,8 @@ class LoginCoordinator: BaseCoordinator {
         switch transition {
         case .Profile:
             showProfilePage()
+        case .SignUp:
+            showSignUpFlow()
         default:
             break
         }
@@ -38,6 +41,12 @@ extension LoginCoordinator {
     
     func showProfilePage() {
         let controller = ProfileViewController.instantiateFromStoryBoard(storyboard: .Main, with: ProfileViewModel())
+        self.show(controller)
+    }
+    
+    func showSignUpFlow() {
+        print("Sign Up")
+        let controller = SignUpViewController.instantiateFromStoryBoard(storyboard: .Main, with: SignUpViewModel())
         self.show(controller)
     }
 }
