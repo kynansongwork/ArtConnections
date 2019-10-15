@@ -15,4 +15,8 @@ class SignUpViewModel: ViewModel {
         
         return validator.isValidEmail(emailString: email)
     }
+    
+    func saveData() {
+        //save and send data
+    }
 }

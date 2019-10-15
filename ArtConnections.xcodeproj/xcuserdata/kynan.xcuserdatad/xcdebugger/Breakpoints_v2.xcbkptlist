@@ -48,7 +48,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "textFieldShouldReturn(_:)"
+            landmarkName = "continueButtonIsEnabled(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -19,20 +19,36 @@ class SignUpViewController: UIViewController, StoryboardLoadedViewController {
     @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
-        continueButtonIsEnabled()
+        continueButton.isEnabled = false
         emailTextField.delegate = self
-        //https://stackoverflow.com/questions/34941069/enable-a-button-in-swift-only-if-all-text-fields-have-been-filled-out
+        [emailTextField, nameTextField, specialtyTextField].forEach( {$0?.addTarget(self, action: #selector(continueButtonIsEnabled), for: .editingChanged)} )
     }
     
-    func continueButtonIsEnabled() {
-        if emailTextField.text?.isEmpty == true || nameTextField.text?.isEmpty == true || specialtyTextField.text?.isEmpty == true {
+    @objc func continueButtonIsEnabled(_ textField: UITextField) {
+        if var text = textField.text {
+            if text.first == " " {
+                text = ""
+                return
+            }
+        }
+        guard
+            let email = emailTextField.text, !email.isEmpty,
+            let name = nameTextField.text, !name.isEmpty,
+            let specialty = specialtyTextField.text, !specialty.isEmpty
+        else {
             continueButton.isEnabled = false
+            return
+        }
+        
+        if viewModel.validateEmail(email) {
+           continueButton.isEnabled = true
         } else {
-            continueButton.isEnabled = true
+            continueButton.isEnabled = false
         }
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
+        viewModel.saveData()
     }
 }
 
@@ -53,7 +69,7 @@ extension SignUpViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let emailText = textField.text {
             if viewModel.validateEmail(emailText) {
-                print("emai is valid")
+                print("email is valid")
             } else {
                 print("email is not valid")
             }
