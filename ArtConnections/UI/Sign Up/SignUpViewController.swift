@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SignUpViewController: UIViewController, StoryboardLoadedViewController {
+class SignUpViewController: KeyboardViewController, StoryboardLoadedViewController {
     var viewModel: SignUpViewModel!
     var delegate = self
     
@@ -17,11 +17,15 @@ class SignUpViewController: UIViewController, StoryboardLoadedViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var specialtyTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var emailTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         continueButton.isEnabled = false
         emailTextField.delegate = self
         [emailTextField, nameTextField, specialtyTextField].forEach( {$0?.addTarget(self, action: #selector(continueButtonIsEnabled), for: .editingChanged)} )
+        
+        let tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapRecogniser)
     }
     
     @objc func continueButtonIsEnabled(_ textField: UITextField) {
@@ -49,6 +53,21 @@ class SignUpViewController: UIViewController, StoryboardLoadedViewController {
     
     @IBAction func continueButtonTapped(_ sender: Any) {
         viewModel.saveData()
+    }
+    
+    @objc override func dismissKeyboard() {
+        emailTextField.resignFirstResponder()
+        nameTextField.resignFirstResponder()
+        specialtyTextField.resignFirstResponder()
+    }
+
+    override func keyboardDidChange(height: CGFloat) {
+        if height == 0 {
+            emailTopConstraint.constant = 150
+        } else {
+            emailTopConstraint.constant = -height + (view.frame.height - (specialtyTextField.superview?.frame.maxY ?? 0) + 100)
+            #warning("Need to fix UI jump when selecting different fields")
+        }
     }
 }
 
