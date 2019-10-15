@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24317062234137DD00AA4A6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24317061234137DD00AA4A6D /* LoginViewController.swift */; };
+		ED032C7B235603EA00C48203 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED032C7A235603EA00C48203 /* ValidationManager.swift */; };
 		ED56861C234CDC890003A160 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861B234CDC890003A160 /* WelcomeViewController.swift */; };
 		ED56861F234E19F40003A160 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861E234E19F40003A160 /* SignUpViewController.swift */; };
 		ED568621234E1A1D0003A160 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED568620234E1A1D0003A160 /* SignUpViewModel.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		24317061234137DD00AA4A6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ED032C7A235603EA00C48203 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		ED56861B234CDC890003A160 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		ED56861E234E19F40003A160 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		ED568620234E1A1D0003A160 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		ED032C792356038D00C48203 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED032C7A235603EA00C48203 /* ValidationManager.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ED568618234CDC590003A160 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		EDAF29A7233BAA31007EB1C1 /* ArtConnections */ = {
 			isa = PBXGroup;
 			children = (
+				ED032C792356038D00C48203 /* Extensions */,
 				EDAF29BE233BAB03007EB1C1 /* Protocols */,
 				EDAF29BB233BAA4C007EB1C1 /* UI */,
 				EDAF29BA233BAA41007EB1C1 /* Coordinators */,
@@ -248,6 +259,7 @@
 				EDAF29CA233BB3CC007EB1C1 /* ProfileViewController.swift in Sources */,
 				EDAF29A9233BAA31007EB1C1 /* AppDelegate.swift in Sources */,
 				EDAF29C6233BACC2007EB1C1 /* ViewModel.swift in Sources */,
+				ED032C7B235603EA00C48203 /* ValidationManager.swift in Sources */,
 				ED56861C234CDC890003A160 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

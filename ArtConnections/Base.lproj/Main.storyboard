@@ -47,7 +47,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dK-pe-NG4">
-                                <rect key="frame" x="183.5" y="669" width="47" height="30"/>
+                                <rect key="frame" x="183.5" y="620" width="47" height="30"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signInTapped:" destination="65u-8C-Fwt" eventType="touchUpInside" id="3Eq-yH-hYD"/>
@@ -63,12 +63,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="9dK-pe-NG4" firstAttribute="top" secondItem="eMz-oe-AJa" secondAttribute="top" constant="625" id="Hvu-Ak-GOg"/>
                             <constraint firstItem="9dK-pe-NG4" firstAttribute="centerX" secondItem="wat-fl-NTl" secondAttribute="centerX" id="RGD-D3-3bv"/>
                             <constraint firstItem="eMz-oe-AJa" firstAttribute="bottom" secondItem="uuq-14-4wo" secondAttribute="bottom" priority="999" constant="102" id="RHl-2S-HPQ"/>
                             <constraint firstItem="eMz-oe-AJa" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uuq-14-4wo" secondAttribute="bottom" constant="40" id="SXi-gS-Ai9"/>
                             <constraint firstItem="uuq-14-4wo" firstAttribute="centerX" secondItem="wat-fl-NTl" secondAttribute="centerX" id="cCH-d0-bab"/>
-                            <constraint firstItem="uuq-14-4wo" firstAttribute="top" secondItem="9dK-pe-NG4" secondAttribute="bottom" constant="31" id="cM7-3y-p84"/>
+                            <constraint firstItem="uuq-14-4wo" firstAttribute="top" secondItem="9dK-pe-NG4" secondAttribute="bottom" constant="80" id="cM7-3y-p84"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eMz-oe-AJa"/>
                     </view>

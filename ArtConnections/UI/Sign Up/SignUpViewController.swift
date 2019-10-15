@@ -11,6 +11,7 @@ import UIKit
 
 class SignUpViewController: UIViewController, StoryboardLoadedViewController {
     var viewModel: SignUpViewModel!
+    var delegate = self
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -19,6 +20,7 @@ class SignUpViewController: UIViewController, StoryboardLoadedViewController {
     
     override func viewDidLoad() {
         continueButtonIsEnabled()
+        emailTextField.delegate = self
         //https://stackoverflow.com/questions/34941069/enable-a-button-in-swift-only-if-all-text-fields-have-been-filled-out
     }
     
@@ -31,5 +33,30 @@ class SignUpViewController: UIViewController, StoryboardLoadedViewController {
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
+    }
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let validEmail = emailTextField.text {
+            if viewModel.validateEmail(validEmail) {
+                print("valid email")
+                return true
+            } else {
+                print("email is invalid")
+                return false
+            }
+        }
+        return false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let emailText = textField.text {
+            if viewModel.validateEmail(emailText) {
+                print("emai is valid")
+            } else {
+                print("email is not valid")
+            }
+        }
     }
 }
