@@ -18,6 +18,7 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
     @IBOutlet weak var specialtyTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var emailTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var emailNotValidLabel: UILabel!
     
     override func viewDidLoad() {
         continueButton.isEnabled = false
@@ -26,6 +27,8 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
         
         let tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapRecogniser)
+        
+        emailNotValidLabel.isHidden = true
     }
     
     @objc func continueButtonIsEnabled(_ textField: UITextField) {
@@ -65,7 +68,8 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
         if height == 0 {
             emailTopConstraint.constant = 150
         } else {
-            emailTopConstraint.constant = -height + (view.frame.height - (specialtyTextField.superview?.frame.maxY ?? 0) + 100)
+            emailTopConstraint.constant = -height + (view.frame.height - (specialtyTextField.superview?.frame.maxY ?? 0) + 80)
+            print(emailTopConstraint.constant)
             #warning("Need to fix UI jump when selecting different fields")
         }
     }
@@ -76,9 +80,11 @@ extension SignUpViewController: UITextFieldDelegate {
         if let validEmail = emailTextField.text {
             if viewModel.validateEmail(validEmail) {
                 print("valid email")
+                emailNotValidLabel.isHidden = true
                 return true
             } else {
                 print("email is invalid")
+                emailNotValidLabel.isHidden = false
                 return false
             }
         }
@@ -88,9 +94,9 @@ extension SignUpViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let emailText = textField.text {
             if viewModel.validateEmail(emailText) {
-                print("email is valid")
+                emailNotValidLabel.isHidden = true
             } else {
-                print("email is not valid")
+                emailNotValidLabel.isHidden = false
             }
         }
     }
