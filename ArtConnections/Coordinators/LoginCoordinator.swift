@@ -20,6 +20,7 @@ class LoginCoordinator: BaseCoordinator {
         let viewController = LoginViewController.instantiateFromStoryBoard(storyboard: .Main, with: LoginViewModel())
         super.init(rootViewController: viewController)
     }
+    
     override func transition(_ transition: TransitionRef) {
         guard let transition = transition as? LoginRef else {
             return
@@ -47,6 +48,12 @@ extension LoginCoordinator {
     func showSignUpFlow() {
         print("Sign Up")
         let controller = SignUpViewController.instantiateFromStoryBoard(storyboard: .Main, with: SignUpViewModel())
+        controller.navigationController?.setNavigationBarHidden(false, animated: false)
+
+        if #available(iOS 13, *) {
+          controller.isModalInPresentation = true
+        }
+        
         self.show(controller)
     }
 }

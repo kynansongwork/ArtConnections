@@ -16,7 +16,6 @@ enum BaseTransitionRef: TransitionRef {
 class AppCoordinator: BaseCoordinator {
     
     init() {
-        //let viewController = ProfileViewController.instantiateFromStoryBoard(storyboard: .Main, with: ProfileViewModel())
         let viewController = WelcomeViewController.instantiateFromStoryBoard(storyboard: .Main, with: ViewModel())
         super.init(rootViewController: viewController)
     }
@@ -39,7 +38,6 @@ extension AppCoordinator {
     
     func presentLoginFlow() {
         let loginCoordinator = LoginCoordinator()
-        //loginCoordinator.delegate = self
         try? present(loginCoordinator)
     }
 }
