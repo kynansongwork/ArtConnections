@@ -24,7 +24,6 @@ class BaseCoordinator {
     
     init<T: ModelledViewController>(rootViewController: T) {
         let navController = UINavigationController(rootViewController: rootViewController)
-        navController.setNavigationBarHidden(true, animated: false)
         self.rootViewController = navController
 
         if let viewModel = rootViewController.viewModel as? ViewModel {

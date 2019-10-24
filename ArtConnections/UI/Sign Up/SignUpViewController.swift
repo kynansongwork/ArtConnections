@@ -21,6 +21,7 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
     @IBOutlet weak var emailNotValidLabel: UILabel!
     
     override func viewDidLoad() {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         continueButton.isEnabled = false
         emailTextField.delegate = self
         [emailTextField, nameTextField, specialtyTextField].forEach( {$0?.addTarget(self, action: #selector(continueButtonIsEnabled), for: .editingChanged)} )

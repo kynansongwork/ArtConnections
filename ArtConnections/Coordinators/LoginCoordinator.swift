@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum LoginRef: TransitionRef {
     case Login
@@ -48,7 +49,6 @@ extension LoginCoordinator {
     func showSignUpFlow() {
         print("Sign Up")
         let controller = SignUpViewController.instantiateFromStoryBoard(storyboard: .Main, with: SignUpViewModel())
-        controller.navigationController?.setNavigationBarHidden(false, animated: false)
 
         if #available(iOS 13, *) {
           controller.isModalInPresentation = true

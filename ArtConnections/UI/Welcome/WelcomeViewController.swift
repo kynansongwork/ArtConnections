@@ -11,6 +11,10 @@ import UIKit
 class WelcomeViewController: UIViewController, StoryboardLoadedViewController {
     var viewModel: ViewModel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
     @IBAction func welcomeButtonTapped(_ sender: Any) {
         viewModel.coordinator?.transition(BaseTransitionRef.Login)
