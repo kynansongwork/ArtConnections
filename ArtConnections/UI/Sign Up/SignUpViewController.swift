@@ -56,7 +56,9 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
-        viewModel.saveData()
+        if let emailText = emailTextField.text, let nameText = nameTextField.text, let specialtyText = specialtyTextField.text {
+           viewModel.saveData(email: emailText, name: nameText, specialty: specialtyText)
+        }
     }
     
     @objc override func dismissKeyboard() {
