@@ -29,6 +29,7 @@
 		EDAF29CC233BB447007EB1C1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29CB233BB447007EB1C1 /* ProfileViewModel.swift */; };
 		EDAF29CE233BB6AC007EB1C1 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */; };
 		EDD76FE323796EC90037A65D /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE223796EC90037A65D /* UserObject.swift */; };
+		EDD76FE62379729C0037A65D /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE52379729C0037A65D /* DataFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		EDAF29CB233BB447007EB1C1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginCoordinator.swift; path = Coordinators/LoginCoordinator.swift; sourceTree = "<group>"; };
 		EDD76FE223796EC90037A65D /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
+		EDD76FE52379729C0037A65D /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		EDAF29A7233BAA31007EB1C1 /* ArtConnections */ = {
 			isa = PBXGroup;
 			children = (
+				EDD76FE4237972560037A65D /* Network */,
 				EDD76FE123796EB40037A65D /* Models */,
 				ED032C7C2356192000C48203 /* Components */,
 				ED032C792356038D00C48203 /* Extensions */,
@@ -193,6 +196,14 @@
 				EDD76FE223796EC90037A65D /* UserObject.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EDD76FE4237972560037A65D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76FE52379729C0037A65D /* DataFetcher.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +292,7 @@
 				EDAF29CA233BB3CC007EB1C1 /* ProfileViewController.swift in Sources */,
 				ED032C7E2356193500C48203 /* KeyboardViewController.swift in Sources */,
 				EDAF29A9233BAA31007EB1C1 /* AppDelegate.swift in Sources */,
+				EDD76FE62379729C0037A65D /* DataFetcher.swift in Sources */,
 				EDAF29C6233BACC2007EB1C1 /* ViewModel.swift in Sources */,
 				EDD76FE323796EC90037A65D /* UserObject.swift in Sources */,
 				ED032C7B235603EA00C48203 /* ValidationManager.swift in Sources */,

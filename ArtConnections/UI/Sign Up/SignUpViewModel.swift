@@ -10,8 +10,6 @@ import Foundation
 
 class SignUpViewModel: ViewModel {
     
-    private(set) var userObject: UserObject?
-    
     func validateEmail(_ email: String) -> Bool {
         let validator = ValidationManager()
         
@@ -20,8 +18,8 @@ class SignUpViewModel: ViewModel {
     
     func saveData(email: String, name: String, specialty: String) {
         //save and send data
-        userObject?.email = email
-        userObject?.name = name
-        userObject?.specialty = specialty
+        let dataFetcher = DataFetcher()
+        let userObject = UserObject(email: email, name: name, specialty: specialty)
+        dataFetcher.encodeData(userData: userObject)
     }
 }
