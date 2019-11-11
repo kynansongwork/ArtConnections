@@ -16,20 +16,21 @@ class DataFetcher {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(userData) {
             defaults.set(encoded, forKey: "artUser")
-            printData()
+            print(decodeData())
         }
     }
     
-    func decodeData() {
+    func decodeData() -> UserObject {
+        
+        var returningUser: UserObject?
+        
         if let savedUser = defaults.object(forKey: "artUser") as? Data {
             let decoder = JSONDecoder()
             if let loadedUser = try? decoder.decode(UserObject.self, from: savedUser) {
-                print(loadedUser)
+                returningUser = loadedUser
             }
         }
-    }
-    
-    func printData() {
-        decodeData()
+        
+        return returningUser!
     }
 }

@@ -10,4 +10,10 @@ import Foundation
 
 class ProfileViewModel: ViewModel {
     
+    var user: UserObject?
+    
+    func getUserDetails() {
+        let dataFetcher = DataFetcher()
+        user = dataFetcher.decodeData()
+    }
 }

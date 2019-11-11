@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController, StoryboardLoadedViewController {
     
-    var viewModel: ViewModel!
+    var viewModel: ProfileViewModel!
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -22,6 +22,9 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let userName = viewModel.user?.name {
+            userNameLabel.text = userName
+        }
         // Do any additional setup after loading the view.
         
         // save image in user-defaults or as a file on directory
