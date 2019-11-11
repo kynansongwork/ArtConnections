@@ -32,6 +32,41 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
         emailNotValidLabel.isHidden = true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupKeyboardObservers()
+    }
+    
+    private func setupKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func removeKeyboardObservers() {
+      NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc private func keyboardWillShow(_ notification: Notification) {
+      let info = notification.userInfo
+        if var keyboardRect = info?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+        keyboardRect = view.convert(keyboardRect, from: nil)
+        self.view.frame.origin.y = -150
+      }
+      UIView.animate(withDuration: 0.3) {
+        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
+      }
+    }
+
+    @objc private func keyboardWillHide(_ notification: Notification) {
+        
+      self.view.frame.origin.y = 0
+      UIView.animate(withDuration: 0.3) {
+        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
+      }
+    }
+    
     @objc func continueButtonIsEnabled(_ textField: UITextField) {
         if var text = textField.text {
             if text.first == " " {
@@ -67,15 +102,15 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
         specialtyTextField.resignFirstResponder()
     }
 
-    override func keyboardDidChange(height: CGFloat) {
-        if height == 0 {
-            emailTopConstraint.constant = 150
-        } else {
-            emailTopConstraint.constant = -height + (view.frame.height - (specialtyTextField.superview?.frame.maxY ?? 0) + 80)
-            print(emailTopConstraint.constant)
-            #warning("Need to fix UI jump when selecting different fields")
-        }
-    }
+//    override func keyboardDidChange(height: CGFloat) {
+//        if height == 0 {
+//            emailTopConstraint.constant = 150
+//        } else {
+//            emailTopConstraint.constant = -height + (view.frame.height - (specialtyTextField.superview?.frame.maxY ?? 0) + 80)
+//            print(emailTopConstraint.constant)
+//            #warning("Need to fix UI jump when selecting different fields")
+//        }
+//    }
 }
 
 extension SignUpViewController: UITextFieldDelegate {
