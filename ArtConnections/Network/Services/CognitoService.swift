@@ -19,7 +19,7 @@ enum CognitoError {
 
 class CognitoService: NSObject {
     
-    func signUp(email: String, pin: String, completion: @escaping (Bool, AWSCognitoIdentityUser?, _ error: CognitoError?) -> Void) {
+    func signUp(userId: UUID, email: String, name: String, specialty: String, pin: String, completion: @escaping (Bool, AWSCognitoIdentityUser?, _ error: CognitoError?) -> Void) {
         
     }
 }
