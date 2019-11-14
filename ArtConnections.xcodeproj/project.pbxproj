@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24317062234137DD00AA4A6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24317061234137DD00AA4A6D /* LoginViewController.swift */; };
+		4884F8A883A07B4EF0194DA3 /* Pods_ArtConnections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB9F62522EC278B4ABB7DD1 /* Pods_ArtConnections.framework */; };
 		ED032C7B235603EA00C48203 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED032C7A235603EA00C48203 /* ValidationManager.swift */; };
 		ED032C7E2356193500C48203 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED032C7D2356193500C48203 /* KeyboardViewController.swift */; };
 		ED56861C234CDC890003A160 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861B234CDC890003A160 /* WelcomeViewController.swift */; };
@@ -28,12 +29,16 @@
 		EDAF29CA233BB3CC007EB1C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29C9233BB3CC007EB1C1 /* ProfileViewController.swift */; };
 		EDAF29CC233BB447007EB1C1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29CB233BB447007EB1C1 /* ProfileViewModel.swift */; };
 		EDAF29CE233BB6AC007EB1C1 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */; };
+		EDD46A68237D9190005D600F /* CognitoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD46A67237D9190005D600F /* CognitoService.swift */; };
 		EDD76FE323796EC90037A65D /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE223796EC90037A65D /* UserObject.swift */; };
 		EDD76FE62379729C0037A65D /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE52379729C0037A65D /* DataFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24317061234137DD00AA4A6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6FB9F62522EC278B4ABB7DD1 /* Pods_ArtConnections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtConnections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE956F0BEE01E1E03E4579B /* Pods-ArtConnections.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtConnections.release.xcconfig"; path = "Target Support Files/Pods-ArtConnections/Pods-ArtConnections.release.xcconfig"; sourceTree = "<group>"; };
+		EA920CA0C81C0F0ADCCACF2E /* Pods-ArtConnections.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtConnections.debug.xcconfig"; path = "Target Support Files/Pods-ArtConnections/Pods-ArtConnections.debug.xcconfig"; sourceTree = "<group>"; };
 		ED032C7A235603EA00C48203 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		ED032C7D2356193500C48203 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		ED56861B234CDC890003A160 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		EDAF29C9233BB3CC007EB1C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EDAF29CB233BB447007EB1C1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginCoordinator.swift; path = Coordinators/LoginCoordinator.swift; sourceTree = "<group>"; };
+		EDD46A67237D9190005D600F /* CognitoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoService.swift; sourceTree = "<group>"; };
 		EDD76FE223796EC90037A65D /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		EDD76FE52379729C0037A65D /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4884F8A883A07B4EF0194DA3 /* Pods_ArtConnections.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +94,24 @@
 				EDADDE34234B2BB400DA614D /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		70BC5F5BC2621B7A0F0429A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FB9F62522EC278B4ABB7DD1 /* Pods_ArtConnections.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA894DBBE0E41EAF5F2E91B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA920CA0C81C0F0ADCCACF2E /* Pods-ArtConnections.debug.xcconfig */,
+				ABE956F0BEE01E1E03E4579B /* Pods-ArtConnections.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		ED032C792356038D00C48203 /* Extensions */ = {
@@ -127,6 +152,8 @@
 			children = (
 				EDAF29A7233BAA31007EB1C1 /* ArtConnections */,
 				EDAF29A6233BAA31007EB1C1 /* Products */,
+				EA894DBBE0E41EAF5F2E91B1 /* Pods */,
+				70BC5F5BC2621B7A0F0429A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,6 +217,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		EDD46A66237D917C005D600F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EDD46A67237D9190005D600F /* CognitoService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EDD76FE123796EB40037A65D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +236,7 @@
 		EDD76FE4237972560037A65D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EDD46A66237D917C005D600F /* Services */,
 				EDD76FE52379729C0037A65D /* DataFetcher.swift */,
 			);
 			path = Network;
@@ -213,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDAF29B7233BAA33007EB1C1 /* Build configuration list for PBXNativeTarget "ArtConnections" */;
 			buildPhases = (
+				281F434E1F0456F54132CCC6 /* [CP] Check Pods Manifest.lock */,
 				EDAF29A1233BAA31007EB1C1 /* Sources */,
 				EDAF29A2233BAA31007EB1C1 /* Frameworks */,
 				EDAF29A3233BAA31007EB1C1 /* Resources */,
+				87722EC7D412A4B21EFDDF18 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,6 +310,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		281F434E1F0456F54132CCC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArtConnections-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87722EC7D412A4B21EFDDF18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArtConnections/Pods-ArtConnections-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArtConnections/Pods-ArtConnections-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArtConnections/Pods-ArtConnections-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EDAF29A1233BAA31007EB1C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -288,6 +368,7 @@
 				EDAF29AB233BAA31007EB1C1 /* ViewController.swift in Sources */,
 				EDADDE35234B2BB400DA614D /* LoginViewModel.swift in Sources */,
 				ED56861F234E19F40003A160 /* SignUpViewController.swift in Sources */,
+				EDD46A68237D9190005D600F /* CognitoService.swift in Sources */,
 				EDAF29BD233BAAC2007EB1C1 /* ProfileCoordinator.swift in Sources */,
 				EDAF29CA233BB3CC007EB1C1 /* ProfileViewController.swift in Sources */,
 				ED032C7E2356193500C48203 /* KeyboardViewController.swift in Sources */,
@@ -440,6 +521,7 @@
 		};
 		EDAF29B8233BAA33007EB1C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA920CA0C81C0F0ADCCACF2E /* Pods-ArtConnections.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +540,7 @@
 		};
 		EDAF29B9233BAA33007EB1C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABE956F0BEE01E1E03E4579B /* Pods-ArtConnections.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
