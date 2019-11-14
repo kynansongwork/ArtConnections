@@ -33,7 +33,12 @@ class CognitoService: NSObject {
                 DispatchQueue.main.async {
                     completion(false, nil, self.convertToCognitoError(response.error!))
                 }
+                print(response.result)
                 return nil
+            }
+            
+            DispatchQueue.main.async {
+                completion(true, response.result?.user, nil)
             }
             return nil
         }

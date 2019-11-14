@@ -17,8 +17,11 @@ enum LoginRef: TransitionRef {
 
 class LoginCoordinator: BaseCoordinator {
     
+    let cognitoService: CognitoService
+    
     required init () {
         let viewController = LoginViewController.instantiateFromStoryBoard(storyboard: .Main, with: LoginViewModel())
+        cognitoService = CognitoService()
         super.init(rootViewController: viewController)
     }
     
@@ -43,12 +46,17 @@ extension LoginCoordinator {
     
     func showProfilePage() {
         let controller = ProfileViewController.instantiateFromStoryBoard(storyboard: .Main, with: ProfileViewModel())
+
+//        if #available(iOS 13, *) {
+//          controller.isModalInPresentation = true
+//        }
+        
         self.show(controller)
     }
     
     func showSignUpFlow() {
         print("Sign Up")
-        let controller = SignUpViewController.instantiateFromStoryBoard(storyboard: .Main, with: SignUpViewModel())
+        let controller = SignUpViewController.instantiateFromStoryBoard(storyboard: .Main, with: SignUpViewModel(cognitoService: cognitoService))
 
         if #available(iOS 13, *) {
           controller.isModalInPresentation = true

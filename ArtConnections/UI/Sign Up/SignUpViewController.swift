@@ -16,6 +16,7 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var specialtyTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var emailTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var emailNotValidLabel: UILabel!
@@ -24,7 +25,7 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         continueButton.isEnabled = false
         emailTextField.delegate = self
-        [emailTextField, nameTextField, specialtyTextField].forEach( {$0?.addTarget(self, action: #selector(continueButtonIsEnabled), for: .editingChanged)} )
+        [emailTextField, nameTextField, specialtyTextField, passwordTextField].forEach( {$0?.addTarget(self, action: #selector(continueButtonIsEnabled), for: .editingChanged)} )
         
         let tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapRecogniser)
@@ -42,7 +43,8 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
         guard
             let email = emailTextField.text, !email.isEmpty,
             let name = nameTextField.text, !name.isEmpty,
-            let specialty = specialtyTextField.text, !specialty.isEmpty
+            let specialty = specialtyTextField.text, !specialty.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty
         else {
             continueButton.isEnabled = false
             return
@@ -56,8 +58,8 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
-        if let emailText = emailTextField.text, let nameText = nameTextField.text, let specialtyText = specialtyTextField.text {
-           viewModel.saveData(email: emailText, name: nameText, specialty: specialtyText)
+        if let emailText = emailTextField.text, let nameText = nameTextField.text, let specialtyText = specialtyTextField.text, let passwordText = passwordTextField.text {
+            viewModel.saveData(email: emailText, name: nameText, specialty: specialtyText, password: passwordText)
         }
         dismissKeyboard()
     }
@@ -66,6 +68,7 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
         emailTextField.resignFirstResponder()
         nameTextField.resignFirstResponder()
         specialtyTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
 }
 

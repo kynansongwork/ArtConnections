@@ -194,6 +194,17 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCo-XM-8WU">
+                                <rect key="frame" x="77" y="511.5" width="78.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IDC-4v-U0U">
+                                <rect key="frame" x="163" y="505" width="174" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -202,14 +213,19 @@
                             <constraint firstItem="ffd-TQ-vNu" firstAttribute="top" secondItem="B78-ks-ZpC" secondAttribute="bottom" constant="150" id="GEu-nl-s55"/>
                             <constraint firstItem="AWe-O7-DiM" firstAttribute="top" secondItem="ffd-TQ-vNu" secondAttribute="bottom" constant="20" id="GqD-dH-6q2"/>
                             <constraint firstItem="gDa-Qt-w34" firstAttribute="centerX" secondItem="D27-3d-v0K" secondAttribute="centerX" id="OGC-iS-uwp"/>
+                            <constraint firstItem="IDC-4v-U0U" firstAttribute="leading" secondItem="oCo-XM-8WU" secondAttribute="trailing" constant="7.5" id="Qes-Ga-bP0"/>
                             <constraint firstItem="Zgg-Do-Yk5" firstAttribute="centerX" secondItem="D27-3d-v0K" secondAttribute="centerX" id="Tm1-93-Yuf"/>
                             <constraint firstItem="lC7-zc-W6S" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Zgg-Do-Yk5" secondAttribute="bottom" constant="60" id="VhG-5v-icG"/>
+                            <constraint firstItem="IDC-4v-U0U" firstAttribute="trailing" secondItem="Miu-L6-wae" secondAttribute="trailing" id="WT3-an-ekw"/>
+                            <constraint firstItem="IDC-4v-U0U" firstAttribute="top" secondItem="gDa-Qt-w34" secondAttribute="bottom" constant="20" id="WY6-MH-Fky"/>
                             <constraint firstItem="lC7-zc-W6S" firstAttribute="bottom" secondItem="Zgg-Do-Yk5" secondAttribute="bottom" priority="999" constant="196" id="dBi-R9-vY6"/>
                             <constraint firstItem="B78-ks-ZpC" firstAttribute="centerX" secondItem="D27-3d-v0K" secondAttribute="centerX" id="eVN-Ww-RWI"/>
                             <constraint firstItem="gDa-Qt-w34" firstAttribute="top" secondItem="pbq-sO-6n1" secondAttribute="bottom" constant="8" id="ekt-IG-e68"/>
                             <constraint firstItem="ffd-TQ-vNu" firstAttribute="centerX" secondItem="D27-3d-v0K" secondAttribute="centerX" id="jna-Ya-yuJ"/>
                             <constraint firstItem="pbq-sO-6n1" firstAttribute="centerX" secondItem="D27-3d-v0K" secondAttribute="centerX" id="nap-nI-8Du"/>
+                            <constraint firstItem="oCo-XM-8WU" firstAttribute="centerY" secondItem="IDC-4v-U0U" secondAttribute="centerY" id="tDk-Oh-FJm"/>
                             <constraint firstItem="pbq-sO-6n1" firstAttribute="top" secondItem="AWe-O7-DiM" secondAttribute="bottom" constant="20" id="yoo-IM-4UO"/>
+                            <constraint firstItem="oCo-XM-8WU" firstAttribute="leading" secondItem="zAY-pR-DTp" secondAttribute="leading" id="zaB-Gr-fPg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lC7-zc-W6S"/>
                     </view>
@@ -219,6 +235,7 @@
                         <outlet property="emailTextField" destination="Miu-L6-wae" id="q9u-qq-vYe"/>
                         <outlet property="emailTopConstraint" destination="GEu-nl-s55" id="Na1-FL-cup"/>
                         <outlet property="nameTextField" destination="q9t-Dk-f3s" id="9hA-Pl-VtN"/>
+                        <outlet property="passwordTextField" destination="IDC-4v-U0U" id="4ND-qI-qAe"/>
                         <outlet property="specialtyTextField" destination="gmp-Tl-92J" id="hj0-rc-Daa"/>
                     </connections>
                 </viewController>

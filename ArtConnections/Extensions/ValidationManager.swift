@@ -16,4 +16,8 @@ class ValidationManager {
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: emailString)
     }
+    
+    func isStrongPassword(passwordString: String) -> Bool {
+        return true
+    }
 }
