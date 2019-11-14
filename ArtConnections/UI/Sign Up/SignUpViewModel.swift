@@ -29,9 +29,8 @@ class SignUpViewModel: ViewModel {
         dataFetcher.encodeData(userData: userObject)
         
         //save to cognito
-//        let userId = UUID()
-//        let pin = "1234"
-//        cognitoService.signUp(userId: userId, email: email, name: name, specialty: specialty, pin: pin, completion: {(success, user, error) in
+//        let password = "1234"
+//        cognitoService.signUp(email: email, name: name, specialty: specialty, password: password, completion: {(success, user, error) in
 //            if success {
 //                print("Success")
 //            } else {
