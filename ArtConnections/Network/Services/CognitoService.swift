@@ -17,6 +17,28 @@ enum CognitoError {
     case unknown(error: Error)
 }
 
+protocol AWSCognitoMockUserPoolProtocol {
+    func currentUser() -> AWSCognitoIdentityUser?
+    func getUser(_ username: String) -> AWSCognitoIdentityUser
+    func signUp(_ username: String, password: String, userAttributes: [AWSCognitoIdentityUserAttributeType]?, validationData: [AWSCognitoIdentityUserAttributeType]?) -> AWSTask<AWSCognitoIdentityUserPoolSignUpResponse>
+}
+
+protocol AWSCognitoMockUserProtocol {
+    var isSignedIn: Bool { get }
+    var confirmedStatus: AWSCognitoIdentityUserStatus { get }
+
+    func signOut()
+    func getSession() -> AWSTask<AWSCognitoIdentityUserSession>
+    func getSession(_ username: String, password: String, validationData: [AWSCognitoIdentityUserAttributeType]?) -> AWSTask<AWSCognitoIdentityUserSession>
+    @discardableResult func forgotPassword() -> AWSTask<AWSCognitoIdentityUserForgotPasswordResponse>
+    func confirmForgotPassword(_ code: String, password: String) -> AWSTask<AWSCognitoIdentityUserConfirmForgotPasswordResponse>
+    @discardableResult func resendConfirmationCode() -> AWSTask<AWSCognitoIdentityUserResendConfirmationCodeResponse>
+    func confirmSignUp(_ code: String) -> AWSTask<AWSCognitoIdentityUserConfirmSignUpResponse>
+    func getDetails() -> AWSTask<AWSCognitoIdentityUserGetDetailsResponse>
+    func changePassword(_ currentPassword: String, proposedPassword: String) -> AWSTask<AWSCognitoIdentityUserChangePasswordResponse>
+    func delete() -> AWSTask<AnyObject>
+}
+
 class CognitoService: NSObject {
     
     var pool: AWSCognitoIdentityUserPool?
