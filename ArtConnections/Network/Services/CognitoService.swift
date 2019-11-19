@@ -42,6 +42,21 @@ protocol AWSCognitoMockUserProtocol {
 class CognitoService: NSObject {
     
     var pool: AWSCognitoIdentityUserPool?
+    var userPool: UserPool
+    
+    override init() {
+        self.userPool = UserPool()
+        super.init()
+    }
+    
+    init(withUserPool userPool: UserPool) {
+        self.userPool = userPool
+        super.init()
+    }
+    
+    func getUser() {
+        
+    }
     
     func signUp(email: String, name: String, specialty: String, password: String, completion: @escaping (Bool, AWSCognitoIdentityUser?, _ error: CognitoError?) -> Void) {
         
