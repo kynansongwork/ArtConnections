@@ -7,24 +7,24 @@
 //
 
 import Foundation
+import UIKit
 
 class SignUpViewModel: ViewModel {
     
     //May put this in credentials service wrapper
     let cognitoService: CognitoService
+    let validator = ValidationManager()
     
     init(cognitoService: CognitoService) {
         self.cognitoService = cognitoService
     }
     
     func validateEmail(_ email: String) -> Bool {
-        let validator = ValidationManager()
-        
         return validator.isValidEmail(emailString: email)
     }
     
-    func validatePassword(_ password: String) -> Bool {
-        return true
+    func validatePassword(_ passwordString: String, _ infoLabel: UILabel!) -> Bool {
+        return validator.isStrongPassword(passwordString, infoLabel)
     }
     
     func saveData(email: String, name: String, specialty: String, password: String) {

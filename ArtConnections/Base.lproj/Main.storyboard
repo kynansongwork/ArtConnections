@@ -167,15 +167,26 @@
                                     <action selector="continueButtonTapped:" destination="RNo-2N-DWU" eventType="touchUpInside" id="VBz-9P-uQ2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your email is not valid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDa-Qt-w34">
-                                <rect key="frame" x="124" y="348" width="166" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your email is not valid" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDa-Qt-w34">
+                                <rect key="frame" x="131.5" y="348" width="151" height="14"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="166" id="DHx-z8-Hs6"/>
+                                    <constraint firstAttribute="width" constant="151" id="DHx-z8-Hs6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCo-XM-8WU">
+                                <rect key="frame" x="77" y="467.5" width="78.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IDC-4v-U0U">
+                                <rect key="frame" x="163" y="461" width="174" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What is your specialty?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmp-Tl-92J">
                                 <rect key="frame" x="160" y="413" width="177" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -190,17 +201,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCo-XM-8WU">
-                                <rect key="frame" x="77" y="467.5" width="78.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLr-oX-QK6">
+                                <rect key="frame" x="57" y="508" width="300" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="GmB-gh-zI7"/>
+                                    <constraint firstAttribute="height" constant="55" id="xM8-Hg-Ytl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IDC-4v-U0U">
-                                <rect key="frame" x="163" y="461" width="174" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -210,6 +220,7 @@
                             <constraint firstItem="AWe-O7-DiM" firstAttribute="top" secondItem="ffd-TQ-vNu" secondAttribute="bottom" constant="20" id="GqD-dH-6q2"/>
                             <constraint firstItem="gmp-Tl-92J" firstAttribute="centerY" secondItem="5Ew-cZ-Cbh" secondAttribute="centerY" id="IsG-vS-mmF"/>
                             <constraint firstItem="AWe-O7-DiM" firstAttribute="top" secondItem="gDa-Qt-w34" secondAttribute="bottom" constant="3" id="JWw-Zt-ZJz"/>
+                            <constraint firstItem="BLr-oX-QK6" firstAttribute="top" secondItem="IDC-4v-U0U" secondAttribute="bottom" constant="13" id="NVm-E9-BfA"/>
                             <constraint firstItem="gDa-Qt-w34" firstAttribute="centerX" secondItem="D27-3d-v0K" secondAttribute="centerX" id="OGC-iS-uwp"/>
                             <constraint firstItem="IDC-4v-U0U" firstAttribute="leading" secondItem="oCo-XM-8WU" secondAttribute="trailing" constant="7.5" id="Qes-Ga-bP0"/>
                             <constraint firstItem="IDC-4v-U0U" firstAttribute="top" secondItem="gmp-Tl-92J" secondAttribute="bottom" constant="14" id="TRp-qz-adE"/>
@@ -224,6 +235,7 @@
                             <constraint firstItem="ffd-TQ-vNu" firstAttribute="centerX" secondItem="D27-3d-v0K" secondAttribute="centerX" id="jna-Ya-yuJ"/>
                             <constraint firstItem="pbq-sO-6n1" firstAttribute="centerX" secondItem="D27-3d-v0K" secondAttribute="centerX" id="nap-nI-8Du"/>
                             <constraint firstItem="gDa-Qt-w34" firstAttribute="top" secondItem="ffd-TQ-vNu" secondAttribute="bottom" constant="3" id="o4i-Ur-xIb"/>
+                            <constraint firstItem="BLr-oX-QK6" firstAttribute="centerX" secondItem="D27-3d-v0K" secondAttribute="centerX" id="p6a-xj-UpJ"/>
                             <constraint firstItem="oCo-XM-8WU" firstAttribute="centerY" secondItem="IDC-4v-U0U" secondAttribute="centerY" id="tDk-Oh-FJm"/>
                             <constraint firstItem="oCo-XM-8WU" firstAttribute="leading" secondItem="zAY-pR-DTp" secondAttribute="leading" id="zaB-Gr-fPg"/>
                         </constraints>
@@ -235,6 +247,7 @@
                         <outlet property="emailTextField" destination="Miu-L6-wae" id="q9u-qq-vYe"/>
                         <outlet property="emailTopConstraint" destination="GEu-nl-s55" id="Na1-FL-cup"/>
                         <outlet property="nameTextField" destination="q9t-Dk-f3s" id="9hA-Pl-VtN"/>
+                        <outlet property="passwordInfoLabel" destination="BLr-oX-QK6" id="hPD-vC-cT2"/>
                         <outlet property="passwordTextField" destination="IDC-4v-U0U" id="4ND-qI-qAe"/>
                         <outlet property="specialtyTextField" destination="gmp-Tl-92J" id="hj0-rc-Daa"/>
                     </connections>

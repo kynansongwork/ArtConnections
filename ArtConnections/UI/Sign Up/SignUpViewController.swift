@@ -20,6 +20,7 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var emailTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var emailNotValidLabel: UILabel!
+    @IBOutlet weak var passwordInfoLabel: UILabel!
     
     override func viewDidLoad() {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
@@ -29,6 +30,11 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
         
         let tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapRecogniser)
+        
+        passwordInfoLabel.attributedText = NSMutableAttributedString(string: "Your password must be at least 8 characters, and contain at least one upper case letter, one lower case letter and a number.", attributes: [
+            .font: UIFont.init(name: "Roboto", size: 11.0) ?? UIFont.systemFont(ofSize: 11.0),
+            .foregroundColor: UIColor.red
+        ])
         
         emailNotValidLabel.isHidden = true
     }
@@ -52,6 +58,12 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
         
         if viewModel.validateEmail(email) {
            continueButton.isEnabled = true
+        } else {
+            continueButton.isEnabled = false
+        }
+        
+        if viewModel.validatePassword(password, passwordInfoLabel) {
+            continueButton.isEnabled = true
         } else {
             continueButton.isEnabled = false
         }
