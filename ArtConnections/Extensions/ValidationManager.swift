@@ -27,10 +27,19 @@ class ValidationManager {
         
         passwordInfoString.addAttributes(setUpAttributeColour(if: (password.count >= 8)),
         range: findRange(in: passwordInfoString.string, for: "at least 8 characters"))
-
+        
+        passwordInfoString.addAttributes(setUpAttributeColour(if: (password.rangeOfCharacter(from: CharacterSet.uppercaseLetters) != nil)),
+        range: findRange(in: passwordInfoString.string, for: "one upper case letter"))
+        
+        passwordInfoString.addAttributes(setUpAttributeColour(if: (password.rangeOfCharacter(from: CharacterSet.lowercaseLetters) != nil)),
+        range: findRange(in: passwordInfoString.string, for: "one lower case letter"))
+        
+        passwordInfoString.addAttributes(setUpAttributeColour(if: (password.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil)),
+        range: findRange(in: passwordInfoString.string, for: "a number"))
+        
         infoLabel.attributedText = passwordInfoString
         
-        if password.count >= 8 {
+        if password.count >= 8, (password.rangeOfCharacter(from: CharacterSet.uppercaseLetters) != nil), (password.rangeOfCharacter(from: CharacterSet.lowercaseLetters) != nil), (password.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil) {
             return true
         } else {
             return false
