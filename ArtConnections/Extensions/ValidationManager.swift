@@ -39,11 +39,9 @@ class ValidationManager {
         
         infoLabel.attributedText = passwordInfoString
         
-        if password.count >= 8, (password.rangeOfCharacter(from: CharacterSet.uppercaseLetters) != nil), (password.rangeOfCharacter(from: CharacterSet.lowercaseLetters) != nil), (password.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil) {
-            return true
-        } else {
-            return false
-        }
+        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$"
+        let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordRegex)
+        return passwordPred.evaluate(with: password)
     }
     
     func setUpAttributeColour(if isValid: Bool) -> [NSAttributedString.Key: Any] {
