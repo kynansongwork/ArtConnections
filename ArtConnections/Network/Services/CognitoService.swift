@@ -63,7 +63,7 @@ class CognitoService: NSObject {
         let nameValue = AWSCognitoIdentityUserAttributeType(name: "name", value: name)
         let specialtyValue = AWSCognitoIdentityUserAttributeType(name: "specialty", value: specialty)
         
-        self.pool?.signUp(email, password: password, userAttributes: [nameValue, specialtyValue], validationData: nil).continueWith {
+        userPool.pool?.signUp(email, password: password, userAttributes: [nameValue, specialtyValue], validationData: nil).continueWith {
             (response) -> Any? in
             guard response.error == nil, response.result != nil else {
                 print("Error: \(response.error)")
