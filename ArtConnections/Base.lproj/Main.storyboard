@@ -169,7 +169,7 @@
                                     <constraint firstAttribute="width" constant="151" id="DHx-z8-Hs6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCo-XM-8WU">
@@ -252,10 +252,10 @@
             </objects>
             <point key="canvasLocation" x="800.00000000000011" y="701.78571428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Additional Details View Controller-->
         <scene sceneID="Kjt-xT-FnL">
             <objects>
-                <viewController id="lFq-88-ojU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdditionalDetailsViewController" id="lFq-88-ojU" customClass="AdditionalDetailsViewController" customModule="ArtConnections" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Op5-5w-6Vf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

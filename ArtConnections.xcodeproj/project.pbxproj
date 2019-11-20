@@ -30,6 +30,8 @@
 		EDAF29CA233BB3CC007EB1C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29C9233BB3CC007EB1C1 /* ProfileViewController.swift */; };
 		EDAF29CC233BB447007EB1C1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29CB233BB447007EB1C1 /* ProfileViewModel.swift */; };
 		EDAF29CE233BB6AC007EB1C1 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */; };
+		EDBCAED123859966003E6F20 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCAED023859966003E6F20 /* SignUpCoordinator.swift */; };
+		EDBCAED323859BDC003E6F20 /* AdditionalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCAED223859BDC003E6F20 /* AdditionalDetailsViewController.swift */; };
 		EDD46A68237D9190005D600F /* CognitoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD46A67237D9190005D600F /* CognitoService.swift */; };
 		EDD76FE323796EC90037A65D /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE223796EC90037A65D /* UserObject.swift */; };
 		EDD76FE62379729C0037A65D /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE52379729C0037A65D /* DataFetcher.swift */; };
@@ -63,6 +65,8 @@
 		EDAF29C9233BB3CC007EB1C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EDAF29CB233BB447007EB1C1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginCoordinator.swift; path = Coordinators/LoginCoordinator.swift; sourceTree = "<group>"; };
+		EDBCAED023859966003E6F20 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		EDBCAED223859BDC003E6F20 /* AdditionalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalDetailsViewController.swift; sourceTree = "<group>"; };
 		EDD46A67237D9190005D600F /* CognitoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoService.swift; sourceTree = "<group>"; };
 		EDD76FE223796EC90037A65D /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		EDD76FE52379729C0037A65D /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			children = (
 				ED56861E234E19F40003A160 /* SignUpViewController.swift */,
 				ED568620234E1A1D0003A160 /* SignUpViewModel.swift */,
+				EDBCAED223859BDC003E6F20 /* AdditionalDetailsViewController.swift */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				EDAF29BF233BAB45007EB1C1 /* AppCoordinator.swift */,
 				EDAF29C1233BABB7007EB1C1 /* BaseCoordinator.swift */,
 				EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */,
+				EDBCAED023859966003E6F20 /* SignUpCoordinator.swift */,
 			);
 			name = Coordinators;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24317062234137DD00AA4A6D /* LoginViewController.swift in Sources */,
+				EDBCAED123859966003E6F20 /* SignUpCoordinator.swift in Sources */,
 				EDAF29C8233BAE39007EB1C1 /* StoryboardLoadedViewController.swift in Sources */,
 				ED568621234E1A1D0003A160 /* SignUpViewModel.swift in Sources */,
 				EDAF29C4233BAC7F007EB1C1 /* ModelledViewController.swift in Sources */,
@@ -380,6 +387,7 @@
 				EDAF29C6233BACC2007EB1C1 /* ViewModel.swift in Sources */,
 				EDD76FE323796EC90037A65D /* UserObject.swift in Sources */,
 				ED032C7B235603EA00C48203 /* ValidationManager.swift in Sources */,
+				EDBCAED323859BDC003E6F20 /* AdditionalDetailsViewController.swift in Sources */,
 				ED56861C234CDC890003A160 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
