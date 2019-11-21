@@ -54,8 +54,11 @@ class CognitoService: NSObject {
         super.init()
     }
     
-    func getUser() {
-        
+    func getUser(withEmail: String) -> AWSCognitoIdentityUser {
+        if let userSource = userPool.pool {
+            return userSource.getUser(withEmail)
+        }
+        return AWSCognitoIdentityUser()
     }
     
     func signUp(email: String, name: String, specialty: String, password: String, completion: @escaping (Bool, AWSCognitoIdentityUser?, _ error: CognitoError?) -> Void) {
