@@ -17,6 +17,7 @@ class SignUpViewModel: ViewModel {
     
     init(cognitoService: CognitoService) {
         self.cognitoService = cognitoService
+        super.init()
     }
     
     func validateEmail(_ email: String) -> Bool {
@@ -45,5 +46,8 @@ class SignUpViewModel: ViewModel {
                 }
             }
         })
+        
+        //Move to success when cognito set up
+        coordinator?.transition(SignUpRef.AdditionalDetails)
     }
 }

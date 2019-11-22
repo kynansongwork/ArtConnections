@@ -34,7 +34,7 @@ class LoginCoordinator: BaseCoordinator {
         case .Profile:
             showProfilePage()
         case .SignUp:
-            showSignUpFlow()
+            presentSignUpFlow()
         default:
             break
         }
@@ -47,21 +47,26 @@ extension LoginCoordinator {
     func showProfilePage() {
         let controller = ProfileViewController.instantiateFromStoryBoard(storyboard: .Main, with: ProfileViewModel())
 
-//        if #available(iOS 13, *) {
-//          controller.isModalInPresentation = true
-//        }
-        
-        self.show(controller)
-    }
-    
-    func showSignUpFlow() {
-        print("Sign Up")
-        let controller = SignUpViewController.instantiateFromStoryBoard(storyboard: .Main, with: SignUpViewModel(cognitoService: cognitoService))
-
         if #available(iOS 13, *) {
           controller.isModalInPresentation = true
         }
         
         self.show(controller)
     }
+    
+    func presentSignUpFlow() {
+        print("Sign Up")
+        present(SignUpCoordinator())
+    }
+    
+//    func showSignUpFlow() {
+//        print("Sign Up")
+//        let controller = SignUpViewController.instantiateFromStoryBoard(storyboard: .Main, with: SignUpViewModel(cognitoService: cognitoService))
+//
+//        if #available(iOS 13, *) {
+//          controller.isModalInPresentation = true
+//        }
+//        
+//        self.show(controller)
+//    }
 }

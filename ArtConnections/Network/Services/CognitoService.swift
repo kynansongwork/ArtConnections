@@ -54,8 +54,11 @@ class CognitoService: NSObject {
         super.init()
     }
     
-    func getUser() {
-        
+    func getUser(withEmail: String) -> AWSCognitoIdentityUser {
+        if let userSource = userPool.pool {
+            return userSource.getUser(withEmail)
+        }
+        return AWSCognitoIdentityUser()
     }
     
     func signUp(email: String, name: String, specialty: String, password: String, completion: @escaping (Bool, AWSCognitoIdentityUser?, _ error: CognitoError?) -> Void) {
@@ -63,7 +66,7 @@ class CognitoService: NSObject {
         let nameValue = AWSCognitoIdentityUserAttributeType(name: "name", value: name)
         let specialtyValue = AWSCognitoIdentityUserAttributeType(name: "specialty", value: specialty)
         
-        self.pool?.signUp(email, password: password, userAttributes: [nameValue, specialtyValue], validationData: nil).continueWith {
+        userPool.pool?.signUp(email, password: password, userAttributes: [nameValue, specialtyValue], validationData: nil).continueWith {
             (response) -> Any? in
             guard response.error == nil, response.result != nil else {
                 print("Error: \(response.error)")
