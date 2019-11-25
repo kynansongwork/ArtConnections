@@ -18,6 +18,7 @@ enum CognitoError {
 }
 
 //Investigate using firebase as an alternative to Cognito
+//https://www.youtube.com/watch?v=uO9OqS1hdoE
 
 class CognitoService: NSObject {
     
