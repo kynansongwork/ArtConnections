@@ -35,6 +35,7 @@
 		EDD46A68237D9190005D600F /* CognitoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD46A67237D9190005D600F /* CognitoService.swift */; };
 		EDD76FE323796EC90037A65D /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE223796EC90037A65D /* UserObject.swift */; };
 		EDD76FE62379729C0037A65D /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE52379729C0037A65D /* DataFetcher.swift */; };
+		EDE2DFC7238BECE400C14BDA /* AdditionalDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2DFC6238BECE300C14BDA /* AdditionalDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		EDD46A67237D9190005D600F /* CognitoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoService.swift; sourceTree = "<group>"; };
 		EDD76FE223796EC90037A65D /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		EDD76FE52379729C0037A65D /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		EDE2DFC6238BECE300C14BDA /* AdditionalDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				ED56861E234E19F40003A160 /* SignUpViewController.swift */,
 				ED568620234E1A1D0003A160 /* SignUpViewModel.swift */,
 				EDBCAED223859BDC003E6F20 /* AdditionalDetailsViewController.swift */,
+				EDE2DFC6238BECE300C14BDA /* AdditionalDetailsViewModel.swift */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				EDADDE35234B2BB400DA614D /* LoginViewModel.swift in Sources */,
 				ED56861F234E19F40003A160 /* SignUpViewController.swift in Sources */,
 				EDD46A68237D9190005D600F /* CognitoService.swift in Sources */,
+				EDE2DFC7238BECE400C14BDA /* AdditionalDetailsViewModel.swift in Sources */,
 				EDAF29BD233BAAC2007EB1C1 /* ProfileCoordinator.swift in Sources */,
 				EDAF29CA233BB3CC007EB1C1 /* ProfileViewController.swift in Sources */,
 				ED032C7E2356193500C48203 /* KeyboardViewController.swift in Sources */,

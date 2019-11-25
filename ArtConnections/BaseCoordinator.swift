@@ -35,6 +35,10 @@ class BaseCoordinator {
         fatalError("Tranistion method needs to be added to coordinator subclass")
     }
     
+    func transition(_ transition: TransitionRef, object: Any? = nil) {
+        fatalError("Tranistion method needs to be added to coordinator subclass")
+    }
+    
     final func present(_ child: BaseCoordinator, completion: (() -> Void)? = nil) {
         child.parentCoordinator = self
         self.children.append(child)

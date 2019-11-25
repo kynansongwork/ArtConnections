@@ -23,14 +23,14 @@ class SignUpCoordinator: BaseCoordinator {
         super.init(rootViewController: viewController)
     }
     
-    override func transition(_ transition: TransitionRef) {
+    override func transition(_ transition: TransitionRef, object: Any? = nil) {
         guard let transition = transition as? SignUpRef else {
             return
         }
         
         switch transition {
         case .AdditionalDetails:
-            showAdditionalDetails()
+            showAdditionalDetails(password: object as! String)
         default:
             break
         }
@@ -39,8 +39,8 @@ class SignUpCoordinator: BaseCoordinator {
 
 extension SignUpCoordinator {
 
-    func showAdditionalDetails() {
-        let controller = AdditionalDetailsViewController.instantiateFromStoryBoard(storyboard: .Main, with: ViewModel())
+    func showAdditionalDetails(password: String) {
+        let controller = AdditionalDetailsViewController.instantiateFromStoryBoard(storyboard: .Main, with: AdditionalDetailsViewModel(password: password))
 
         if #available(iOS 13, *) {
           controller.isModalInPresentation = true

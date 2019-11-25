@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 
 class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedViewController {
-    var viewModel: ViewModel!
+    var viewModel: AdditionalDetailsViewModel!
     
-    
+    override func viewDidLoad() {
+        print(viewModel.password)
+    }
 }
