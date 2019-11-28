@@ -267,7 +267,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yw4-IM-Ov2">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Website" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yw4-IM-Ov2">
                                 <rect key="frame" x="103" y="354" width="154" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -277,6 +277,9 @@
                                 <rect key="frame" x="146" y="720" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Complete sign-up"/>
+                                <connections>
+                                    <action selector="completeSignUpTapped:" destination="lFq-88-ojU" eventType="touchUpInside" id="qYX-6K-zqV"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="306-YV-MUW">
                                 <rect key="frame" x="87" y="178" width="240" height="128"/>
@@ -302,6 +305,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2kQ-ZV-aTp"/>
                     </view>
+                    <connections>
+                        <outlet property="completeSignUpButton" destination="l1B-i3-YtW" id="ykI-8i-ijN"/>
+                        <outlet property="profileImageView" destination="306-YV-MUW" id="PDf-1i-9ni"/>
+                        <outlet property="profileTextInputView" destination="v82-zE-DVz" id="6ht-me-WZf"/>
+                        <outlet property="websiteTextField" destination="yw4-IM-Ov2" id="sss-B7-KdO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppr-x7-tas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

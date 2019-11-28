@@ -34,10 +34,10 @@ class SignUpViewModel: ViewModel {
         
         //save to user defaults
         let dataFetcher = DataFetcher()
-        let userObject = UserObject(email: email, name: name, specialty: specialty)
+        let userObject = UserObject(email: email, name: name, specialty: specialty, password: password)
         dataFetcher.encodeData(userData: userObject)
         
-        //save to cognito
+        //save to cognito - move to next viewModel
         cognitoService.signUp(email: email, name: name, specialty: specialty, password: password, completion: {(success, user, error) in
             if success {
                 print("Success")
@@ -49,7 +49,7 @@ class SignUpViewModel: ViewModel {
         })
         
         //Move to success when cognito set up
-        coordinator?.transition(SignUpRef.AdditionalDetails, object: password)
+        coordinator?.transition(SignUpRef.AdditionalDetails, object: userObject)
     }
     
     func completeSignUp() {

@@ -11,11 +11,27 @@ import UIKit
 
 class AdditionalDetailsViewModel: ViewModel {
     
-    var password: String?
+    let cognitoService: CognitoService
+    var userObject: UserObject
     
-    init(password: String) {
-        self.password = password
+    init(cognitoService: CognitoService, userObject: UserObject) {
+        self.cognitoService = cognitoService
+        self.userObject = userObject
         super.init()
+    }
+    
+    func saveUserDetails(profile: String, website: URL, image: UIImage) {
+        
+        //save to cognito - move to next viewModel
+        cognitoService.signUp(email: userObject.email, name: userObject.name, specialty: userObject.specialty, password: userObject.password, completion: {(success, user, error) in
+            if success {
+                print("Success")
+            } else {
+                if let error = error, case CognitoError.userAlreadyExists = error {
+                    print("User already exists")
+                }
+            }
+        })
     }
     
 }

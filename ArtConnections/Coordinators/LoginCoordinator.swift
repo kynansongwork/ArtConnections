@@ -58,15 +58,4 @@ extension LoginCoordinator {
         print("Sign Up")
         present(SignUpCoordinator())
     }
-    
-//    func showSignUpFlow() {
-//        print("Sign Up")
-//        let controller = SignUpViewController.instantiateFromStoryBoard(storyboard: .Main, with: SignUpViewModel(cognitoService: cognitoService))
-//
-//        if #available(iOS 13, *) {
-//          controller.isModalInPresentation = true
-//        }
-//        
-//        self.show(controller)
-//    }
 }

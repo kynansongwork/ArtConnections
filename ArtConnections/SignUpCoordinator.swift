@@ -30,7 +30,7 @@ class SignUpCoordinator: BaseCoordinator {
         
         switch transition {
         case .AdditionalDetails:
-            showAdditionalDetails(password: object as! String)
+            showAdditionalDetails(userObject: object as! UserObject)
         default:
             break
         }
@@ -39,8 +39,8 @@ class SignUpCoordinator: BaseCoordinator {
 
 extension SignUpCoordinator {
 
-    func showAdditionalDetails(password: String) {
-        let controller = AdditionalDetailsViewController.instantiateFromStoryBoard(storyboard: .Main, with: AdditionalDetailsViewModel(password: password))
+    func showAdditionalDetails(userObject: UserObject) {
+        let controller = AdditionalDetailsViewController.instantiateFromStoryBoard(storyboard: .Main, with: AdditionalDetailsViewModel(cognitoService: cognitoService, userObject: userObject))
 
         if #available(iOS 13, *) {
           controller.isModalInPresentation = true
