@@ -51,17 +51,4 @@ class SignUpViewModel: ViewModel {
         //Move to success when cognito set up
         coordinator?.transition(SignUpRef.AdditionalDetails, object: userObject)
     }
-    
-    func completeSignUp() {
-        //save to cognito
-//        cognitoService.signUp(email: email, name: name, specialty: specialty, password: password, completion: {(success, user, error) in
-//            if success {
-//                print("Success")
-//            } else {
-//                if let error = error, case CognitoError.userAlreadyExists = error {
-//                    print("User already exists")
-//                }
-//            }
-//        })
-    }
 }
