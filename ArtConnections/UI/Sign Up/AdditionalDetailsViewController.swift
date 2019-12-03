@@ -21,7 +21,27 @@ class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedV
     override func viewDidLoad() {
         print(viewModel.userObject.email)
         setUpProfileImageView()
+        
+        profileTextInputView.delegate = self
+        
+        [websiteTextField].forEach( {$0?.addTarget(self, action: #selector(continueButtonIsEnabled), for: .editingChanged)} )
     }
+    
+    @objc func continueButtonIsEnabled(_ textField: UITextField) {
+        if var text = textField.text {
+            if text.first == " " {
+                text = ""
+                return
+            }
+        }
+        guard
+            let website = websiteTextField.text, !website.isEmpty
+        else {
+            self.completeSignUpButton.isEnabled = false
+            return
+        }
+    }
+    
     
     @IBAction func completeSignUpTapped(_ sender: Any) {
 //        if let profileImage = profileImageView.image {
@@ -65,6 +85,28 @@ extension AdditionalDetailsViewController: UIImagePickerControllerDelegate, UINa
         }
         dismiss(animated: true, completion: nil)
         //Needed to dismiss image picker once an image is selected.
+    }
+}
+
+extension AdditionalDetailsViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if let websiteText = websiteTextField.text {
+            if textView.text.isEmpty || websiteText.isEmpty {
+                completeSignUpButton.isEnabled = false
+            } else {
+                completeSignUpButton.isEnabled = true
+            }
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if let websiteText = websiteTextField.text {
+            if textView.text.isEmpty || websiteText.isEmpty {
+                completeSignUpButton.isEnabled = false
+            } else {
+                completeSignUpButton.isEnabled = true
+            }
+        }
     }
 }
 
