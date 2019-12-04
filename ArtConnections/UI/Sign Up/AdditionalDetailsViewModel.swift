@@ -13,10 +13,12 @@ class AdditionalDetailsViewModel: ViewModel {
     
     let cognitoService: CognitoService
     var userObject: UserObject
+    var s3Service: S3Service
     
     init(cognitoService: CognitoService, userObject: UserObject) {
         self.cognitoService = cognitoService
         self.userObject = userObject
+        self.s3Service = S3Service()
         super.init()
     }
     
