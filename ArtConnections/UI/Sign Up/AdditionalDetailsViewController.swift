@@ -24,6 +24,9 @@ class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedV
         
         profileTextInputView.delegate = self
         
+        let tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapRecogniser)
+        
         [websiteTextField].forEach( {$0?.addTarget(self, action: #selector(continueButtonIsEnabled), for: .editingChanged)} )
     }
     
@@ -44,10 +47,11 @@ class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedV
     
     
     @IBAction func completeSignUpTapped(_ sender: Any) {
-//        if let profileImage = profileImageView.image {
-//          viewModel.saveUserDetails(profile: <#T##String#>, website: <#T##URL#>, image: profileImage)
+//        if let profileImage = profileImageView.image, let profileText = profileTextInputView.text, let website = websiteTextField.text {
+//          viewModel.saveUserDetails(profile: profileText, website: website, image: profileImage)
 //        }
         print("Save data here")
+        dismissKeyboard()
     }
     
     func setUpProfileImageView() {
@@ -64,6 +68,11 @@ class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedV
         print("image view tapped")
         //Add camera method down the line
         selectImage(sourceType: .photoLibrary)
+    }
+    
+    @objc override func dismissKeyboard() {
+        websiteTextField.resignFirstResponder()
+        profileTextInputView.resignFirstResponder()
     }
 }
 

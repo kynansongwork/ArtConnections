@@ -38,15 +38,15 @@ class SignUpViewModel: ViewModel {
         dataFetcher.encodeData(userData: userObject)
         
         //save to cognito - move to next viewModel
-        cognitoService.signUp(email: email, name: name, specialty: specialty, password: password, completion: {(success, user, error) in
-            if success {
-                print("Success")
-            } else {
-                if let error = error, case CognitoError.userAlreadyExists = error {
-                    print("User already exists")
-                }
-            }
-        })
+//        cognitoService.signUp(email: email, name: name, specialty: specialty, password: password, completion: {(success, user, error) in
+//            if success {
+//                print("Success")
+//            } else {
+//                if let error = error, case CognitoError.userAlreadyExists = error {
+//                    print("User already exists")
+//                }
+//            }
+//        })
         
         //Move to success when cognito set up
         coordinator?.transition(SignUpRef.AdditionalDetails, object: userObject)

@@ -20,7 +20,7 @@ class AdditionalDetailsViewModel: ViewModel {
         super.init()
     }
     
-    func saveUserDetails(profile: String, website: URL, image: UIImage) {
+    func saveUserDetails(profile: String, website: String, image: UIImage) {
         
         //save to cognito - move to next viewModel
         cognitoService.signUp(email: userObject.email, name: userObject.name, specialty: userObject.specialty, password: userObject.password, completion: {(success, user, error) in
