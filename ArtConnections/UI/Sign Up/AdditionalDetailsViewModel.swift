@@ -22,8 +22,11 @@ class AdditionalDetailsViewModel: ViewModel {
     
     func saveUserDetails(profile: String, website: String, image: UIImage) {
         
+        //remove when S3 bucket set up
+        let convertedImage = image.convertImageToData()
+        
         //save to cognito - move to next viewModel
-        cognitoService.signUp(email: userObject.email, name: userObject.name, specialty: userObject.specialty, password: userObject.password, completion: {(success, user, error) in
+        cognitoService.signUp(email: userObject.email, name: userObject.name, specialty: userObject.specialty, password: userObject.password, profile: profile, website: website, image: convertedImage, completion: {(success, user, error) in
             if success {
                 print("Success")
             } else {

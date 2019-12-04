@@ -15,6 +15,8 @@
 		ED56861C234CDC890003A160 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861B234CDC890003A160 /* WelcomeViewController.swift */; };
 		ED56861F234E19F40003A160 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861E234E19F40003A160 /* SignUpViewController.swift */; };
 		ED568621234E1A1D0003A160 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED568620234E1A1D0003A160 /* SignUpViewModel.swift */; };
+		ED5D436F2397B3F500E74708 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D436E2397B3F400E74708 /* UIImageExtensions.swift */; };
+		ED5D43712397C14700E74708 /* S3Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D43702397C14700E74708 /* S3Service.swift */; };
 		EDADDE35234B2BB400DA614D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDADDE34234B2BB400DA614D /* LoginViewModel.swift */; };
 		EDAF29A9233BAA31007EB1C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29A8233BAA31007EB1C1 /* AppDelegate.swift */; };
 		EDAF29AB233BAA31007EB1C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29AA233BAA31007EB1C1 /* ViewController.swift */; };
@@ -49,6 +51,8 @@
 		ED56861B234CDC890003A160 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		ED56861E234E19F40003A160 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		ED568620234E1A1D0003A160 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		ED5D436E2397B3F400E74708 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		ED5D43702397C14700E74708 /* S3Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3Service.swift; sourceTree = "<group>"; };
 		EDADDE34234B2BB400DA614D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EDAF29A5233BAA31007EB1C1 /* ArtConnections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtConnections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAF29A8233BAA31007EB1C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				ED032C7A235603EA00C48203 /* ValidationManager.swift */,
+				ED5D436E2397B3F400E74708 /* UIImageExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 			children = (
 				EDD46A67237D9190005D600F /* CognitoService.swift */,
 				2491701A2382BB1C00BA81AE /* UserPool.swift */,
+				ED5D43702397C14700E74708 /* S3Service.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -368,11 +374,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5D43712397C14700E74708 /* S3Service.swift in Sources */,
 				24317062234137DD00AA4A6D /* LoginViewController.swift in Sources */,
 				EDBCAED123859966003E6F20 /* SignUpCoordinator.swift in Sources */,
 				EDAF29C8233BAE39007EB1C1 /* StoryboardLoadedViewController.swift in Sources */,
 				ED568621234E1A1D0003A160 /* SignUpViewModel.swift in Sources */,
 				EDAF29C4233BAC7F007EB1C1 /* ModelledViewController.swift in Sources */,
+				ED5D436F2397B3F500E74708 /* UIImageExtensions.swift in Sources */,
 				EDAF29C2233BABB7007EB1C1 /* BaseCoordinator.swift in Sources */,
 				EDAF29C0233BAB45007EB1C1 /* AppCoordinator.swift in Sources */,
 				EDAF29CE233BB6AC007EB1C1 /* LoginCoordinator.swift in Sources */,

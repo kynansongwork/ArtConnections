@@ -6,6 +6,7 @@ target 'ArtConnections' do
   use_frameworks!
   pod 'AWSCognito', '2.9.9'
   pod 'AWSCognitoIdentityProvider', '2.9.9'
+  pod 'AWSS3', '2.9.9'
 
 end
 
