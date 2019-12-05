@@ -12,11 +12,17 @@ import UIKit
 extension UIImage {
     
     func convertImageToData() -> String {
-        let imageData = self.pngData()
-        
-        if let strBase64 = imageData?.base64EncodedString(options: .lineLength64Characters) {
-          return strBase64
+        if let imageData = self.pngData() {
+            let dataString = String(decoding: imageData, as: UTF8.self)
+            return dataString
         }
         return ""
+        
+        
+//        if let strBase64 = imageData?.base64EncodedString(options: .lineLength64Characters) {
+//          return strBase64
+//        }
+//        return ""
+        
     }
 }
