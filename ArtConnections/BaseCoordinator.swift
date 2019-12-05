@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 enum StoryboardRef: String {
+    case Main
     case Profile
     case Login
 }
@@ -23,7 +24,6 @@ class BaseCoordinator {
     
     init<T: ModelledViewController>(rootViewController: T) {
         let navController = UINavigationController(rootViewController: rootViewController)
-        navController.setNavigationBarHidden(true, animated: false)
         self.rootViewController = navController
 
         if let viewModel = rootViewController.viewModel as? ViewModel {
@@ -35,10 +35,21 @@ class BaseCoordinator {
         fatalError("Tranistion method needs to be added to coordinator subclass")
     }
     
+    func transition(_ transition: TransitionRef, object: Any? = nil) {
+        fatalError("Tranistion method needs to be added to coordinator subclass")
+    }
+    
     final func present(_ child: BaseCoordinator, completion: (() -> Void)? = nil) {
         child.parentCoordinator = self
         self.children.append(child)
-        rootViewController.present(child.rootViewController, animated: true, completion: completion)
+        if let navController = child.rootViewController as? UINavigationController {
+            
+            if #available(iOS 13, *) {
+              navController.isModalInPresentation = true
+            }
+            
+            rootViewController.present(navController, animated: true, completion: completion)
+        }
     }
     
     final func dismiss(completion: (() -> Void)? = nil) {

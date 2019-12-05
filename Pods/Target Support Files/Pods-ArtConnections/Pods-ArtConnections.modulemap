@@ -1,0 +1,6 @@
+framework module Pods_ArtConnections {
+  umbrella header "Pods-ArtConnections-umbrella.h"
+
+  export *
+  module * { export * }
+}
