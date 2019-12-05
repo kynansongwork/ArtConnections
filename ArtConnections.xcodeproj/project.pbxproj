@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24317062234137DD00AA4A6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24317061234137DD00AA4A6D /* LoginViewController.swift */; };
+		2443F3E923993D21003A7939 /* FirebaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443F3E823993D21003A7939 /* FirebaseServices.swift */; };
 		2491701B2382BB1C00BA81AE /* UserPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491701A2382BB1C00BA81AE /* UserPool.swift */; };
 		4884F8A883A07B4EF0194DA3 /* Pods_ArtConnections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB9F62522EC278B4ABB7DD1 /* Pods_ArtConnections.framework */; };
 		ED032C7B235603EA00C48203 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED032C7A235603EA00C48203 /* ValidationManager.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		24317061234137DD00AA4A6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2443F3E823993D21003A7939 /* FirebaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServices.swift; sourceTree = "<group>"; };
 		2491701A2382BB1C00BA81AE /* UserPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPool.swift; sourceTree = "<group>"; };
 		6FB9F62522EC278B4ABB7DD1 /* Pods_ArtConnections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtConnections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE956F0BEE01E1E03E4579B /* Pods-ArtConnections.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtConnections.release.xcconfig"; path = "Target Support Files/Pods-ArtConnections/Pods-ArtConnections.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 				EDADDE34234B2BB400DA614D /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		2443F3E723993D0D003A7939 /* Firebase Services */ = {
+			isa = PBXGroup;
+			children = (
+				2443F3E823993D21003A7939 /* FirebaseServices.swift */,
+			);
+			path = "Firebase Services";
 			sourceTree = "<group>";
 		};
 		70BC5F5BC2621B7A0F0429A0 /* Frameworks */ = {
@@ -235,6 +245,7 @@
 		EDD46A66237D917C005D600F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2443F3E723993D0D003A7939 /* Firebase Services */,
 				EDD46A67237D9190005D600F /* CognitoService.swift */,
 				2491701A2382BB1C00BA81AE /* UserPool.swift */,
 				ED5D43702397C14700E74708 /* S3Service.swift */,
@@ -384,6 +395,7 @@
 				EDAF29C2233BABB7007EB1C1 /* BaseCoordinator.swift in Sources */,
 				EDAF29C0233BAB45007EB1C1 /* AppCoordinator.swift in Sources */,
 				EDAF29CE233BB6AC007EB1C1 /* LoginCoordinator.swift in Sources */,
+				2443F3E923993D21003A7939 /* FirebaseServices.swift in Sources */,
 				EDAF29CC233BB447007EB1C1 /* ProfileViewModel.swift in Sources */,
 				2491701B2382BB1C00BA81AE /* UserPool.swift in Sources */,
 				EDAF29AB233BAA31007EB1C1 /* ViewController.swift in Sources */,
