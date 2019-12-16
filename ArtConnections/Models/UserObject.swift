@@ -12,5 +12,4 @@ struct UserObject: Codable {
     var email: String
     var name: String
     var specialty: String
-    var password: String
 }

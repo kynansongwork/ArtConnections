@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class SignUpViewModel: ViewModel {
     
@@ -32,23 +33,34 @@ class SignUpViewModel: ViewModel {
     func saveData(email: String, name: String, specialty: String, password: String) {
         //save and send data
         
-        //save to user defaults
-        let dataFetcher = DataFetcher()
-        let userObject = UserObject(email: email, name: name, specialty: specialty, password: password)
-        dataFetcher.encodeData(userData: userObject)
+        //strip out whitespace
+        let userObject = UserObject(email: email, name: name, specialty: specialty)
         
-        //save to cognito - move to next viewModel
-//        cognitoService.signUp(email: email, name: name, specialty: specialty, password: password, completion: {(success, user, error) in
-//            if success {
-//                print("Success")
-//            } else {
-//                if let error = error, case CognitoError.userAlreadyExists = error {
-//                    print("User already exists")
-//                }
-//            }
-//        })
+        let cleanEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cleanPassword = password.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        //Move to success when cognito set up
-        coordinator?.transition(SignUpRef.AdditionalDetails, object: userObject)
+        Auth.auth().createUser(withEmail: cleanEmail, password: cleanPassword) { (result, error) in
+            
+            //Errors
+            if let error = error {
+                print("There was an error creating the user: \(error.localizedDescription)")
+            } else {
+                let database = Firestore.firestore()
+                var reference: DocumentReference? = nil
+                
+                reference = database.collection("users").addDocument(data: [
+                    "profileImage": "",
+                    "profileInfo": "",
+                    "specialty": specialty,
+                    "website": "",
+                    "uid": result!.user.uid
+                ], completion: { (error) in
+                    if error != nil {
+                        print("Userdata error when saving to database: \(error?.localizedDescription)")
+                    }
+                })
+                self.coordinator?.transition(SignUpRef.AdditionalDetails, object: userObject)
+            }
+        }
     }
 }

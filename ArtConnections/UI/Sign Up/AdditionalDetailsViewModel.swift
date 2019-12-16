@@ -27,16 +27,16 @@ class AdditionalDetailsViewModel: ViewModel {
         //remove when S3 bucket set up
         let convertedImage = image.convertImageToData()
         
-        //save to cognito - move to next viewModel
-        cognitoService.signUp(email: userObject.email, name: userObject.name, specialty: userObject.specialty, password: userObject.password, profile: profile, website: website, image: convertedImage, completion: {(success, user, error) in
-            if success {
-                print("Success")
-            } else {
-                if let error = error, case CognitoError.userAlreadyExists = error {
-                    print("User already exists")
-                }
-            }
-        })
+//        //save to cognito - move to next viewModel
+//        cognitoService.signUp(email: userObject.email, name: userObject.name, specialty: userObject.specialty, password: userObject.password, profile: profile, website: website, image: convertedImage, completion: {(success, user, error) in
+//            if success {
+//                print("Success")
+//            } else {
+//                if let error = error, case CognitoError.userAlreadyExists = error {
+//                    print("User already exists")
+//                }
+//            }
+//        })
     }
     
 }

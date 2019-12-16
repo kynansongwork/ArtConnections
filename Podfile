@@ -9,6 +9,7 @@ target 'ArtConnections' do
   pod 'AWSS3', '2.9.9'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
 
 end
 
