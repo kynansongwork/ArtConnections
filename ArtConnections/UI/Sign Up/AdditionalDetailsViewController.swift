@@ -60,7 +60,7 @@ class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedV
         profileImageView.addGestureRecognizer(tapRecogniser)
         
         if profileImageView.image == nil {
-            profileImageView?.image = viewModel.s3Service.profileImage
+            profileImageView?.image = viewModel.profileImage
         }
     }
     

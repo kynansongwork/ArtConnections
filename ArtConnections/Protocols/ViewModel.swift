@@ -8,9 +8,18 @@
 
 import Foundation
 
-class ViewModel {
+class ViewModel: NSObject {
     weak var coordinator: BaseCoordinator?
     weak var delegate: ViewModelDelegate?
+    
+    override init() {
+        super.init()
+    }
+    
+    init(coordinator: BaseCoordinator) {
+        self.coordinator = coordinator
+        super.init()
+    }
 }
 
 protocol ViewModelDelegate: class {
