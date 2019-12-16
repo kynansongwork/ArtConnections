@@ -39,6 +39,7 @@
 		EDD76FE323796EC90037A65D /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE223796EC90037A65D /* UserObject.swift */; };
 		EDD76FE62379729C0037A65D /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE52379729C0037A65D /* DataFetcher.swift */; };
 		EDE2DFC7238BECE400C14BDA /* AdditionalDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2DFC6238BECE300C14BDA /* AdditionalDetailsViewModel.swift */; };
+		EDFD89BC23A79503000F0556 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDFD89BB23A79502000F0556 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		EDD76FE223796EC90037A65D /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		EDD76FE52379729C0037A65D /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		EDE2DFC6238BECE300C14BDA /* AdditionalDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalDetailsViewModel.swift; sourceTree = "<group>"; };
+		EDFD89BB23A79502000F0556 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				EDAF29AF233BAA33007EB1C1 /* Assets.xcassets */,
 				EDAF29B1233BAA33007EB1C1 /* LaunchScreen.storyboard */,
 				EDAF29B4233BAA33007EB1C1 /* Info.plist */,
+				EDFD89BB23A79502000F0556 /* GoogleService-Info.plist */,
 			);
 			path = ArtConnections;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDAF29B3233BAA33007EB1C1 /* LaunchScreen.storyboard in Resources */,
+				EDFD89BC23A79503000F0556 /* GoogleService-Info.plist in Resources */,
 				EDAF29B0233BAA33007EB1C1 /* Assets.xcassets in Resources */,
 				EDAF29AE233BAA31007EB1C1 /* Main.storyboard in Resources */,
 			);
