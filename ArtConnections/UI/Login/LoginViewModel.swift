@@ -10,5 +10,10 @@ import Foundation
 
 class LoginViewModel: ViewModel {
     
+    let validator = ValidationManager()
+    
+    func validateEmail(_ email: String) -> Bool {
+        return validator.isValidEmail(emailString: email)
+    }
     
 }
