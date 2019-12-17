@@ -33,7 +33,7 @@ class SignUpViewModel: ViewModel {
         //strip out whitespace
         
         
-        let cleanEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cleanEmail = email.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         let cleanPassword = password.trimmingCharacters(in: .whitespacesAndNewlines)
         let userObject = UserObject(email: cleanEmail, name: name, specialty: specialty, password: cleanPassword)
         self.coordinator?.transition(SignUpRef.AdditionalDetails, object: userObject)

@@ -50,7 +50,6 @@ class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedV
         if let profileImage = profileImageView.image, let profileText = profileTextInputView.text, let website = websiteTextField.text {
           viewModel.saveUserDetails(profile: profileText, website: website, image: profileImage)
         }
-        print("Save data here")
         dismissKeyboard()
     }
     
