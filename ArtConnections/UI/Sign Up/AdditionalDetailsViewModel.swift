@@ -44,7 +44,7 @@ class AdditionalDetailsViewModel: ViewModel {
                         print("Userdata error when saving to database: \(error?.localizedDescription)")
                     }
                 })
-                self.coordinator?.transition(LoginRef.Profile)
+                self.coordinator?.present(ProfileCoordinator())
             }
         }
     }

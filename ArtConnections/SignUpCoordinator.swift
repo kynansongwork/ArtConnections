@@ -11,15 +11,11 @@ import UIKit
 
 enum SignUpRef: TransitionRef {
     case AdditionalDetails
-    case LogIn
 }
 
 class SignUpCoordinator: BaseCoordinator {
     
-    let cognitoService: CognitoService
-    
     required init () {
-        cognitoService = CognitoService()
         let viewController = SignUpViewController.instantiateFromStoryBoard(storyboard: .Main, with: SignUpViewModel())
         super.init(rootViewController: viewController)
     }
@@ -32,8 +28,6 @@ class SignUpCoordinator: BaseCoordinator {
         switch transition {
         case .AdditionalDetails:
             showAdditionalDetails(userObject: object as! UserObject)
-        case .LogIn:
-            print("Logging in")
         default:
             break
         }
@@ -43,12 +37,11 @@ class SignUpCoordinator: BaseCoordinator {
 extension SignUpCoordinator {
 
     func showAdditionalDetails(userObject: UserObject) {
-        let controller = AdditionalDetailsViewController.instantiateFromStoryBoard(storyboard: .Main, with: AdditionalDetailsViewModel(coordinator: self, userObject: userObject))
+        let controller = AdditionalDetailsViewController.instantiateFromStoryBoard(storyboard: .Main, with: AdditionalDetailsViewModel(coordinator: self, userObject: userObject), coordinator: self)
 
         if #available(iOS 13, *) {
           controller.isModalInPresentation = true
         }
-        
         self.show(controller)
     }
 }
