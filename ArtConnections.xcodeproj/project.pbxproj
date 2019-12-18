@@ -12,7 +12,6 @@
 		2491701B2382BB1C00BA81AE /* UserPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491701A2382BB1C00BA81AE /* UserPool.swift */; };
 		24D6127D23AAAFF200E66D5D /* LoadingWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6127B23AAAFF200E66D5D /* LoadingWindowView.swift */; };
 		24D6127E23AAAFF200E66D5D /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6127C23AAAFF200E66D5D /* CustomActivityIndicator.swift */; };
-		24D6128023AAB19C00E66D5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24D6127F23AAB19C00E66D5D /* GoogleService-Info.plist */; };
 		4884F8A883A07B4EF0194DA3 /* Pods_ArtConnections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB9F62522EC278B4ABB7DD1 /* Pods_ArtConnections.framework */; };
 		ED032C7B235603EA00C48203 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED032C7A235603EA00C48203 /* ValidationManager.swift */; };
 		ED032C7E2356193500C48203 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED032C7D2356193500C48203 /* KeyboardViewController.swift */; };
@@ -50,7 +49,6 @@
 		2491701A2382BB1C00BA81AE /* UserPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPool.swift; sourceTree = "<group>"; };
 		24D6127B23AAAFF200E66D5D /* LoadingWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingWindowView.swift; sourceTree = "<group>"; };
 		24D6127C23AAAFF200E66D5D /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
-		24D6127F23AAB19C00E66D5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6FB9F62522EC278B4ABB7DD1 /* Pods_ArtConnections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtConnections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE956F0BEE01E1E03E4579B /* Pods-ArtConnections.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtConnections.release.xcconfig"; path = "Target Support Files/Pods-ArtConnections/Pods-ArtConnections.release.xcconfig"; sourceTree = "<group>"; };
 		EA920CA0C81C0F0ADCCACF2E /* Pods-ArtConnections.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtConnections.debug.xcconfig"; path = "Target Support Files/Pods-ArtConnections/Pods-ArtConnections.debug.xcconfig"; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 				EDAF29AF233BAA33007EB1C1 /* Assets.xcassets */,
 				EDAF29B1233BAA33007EB1C1 /* LaunchScreen.storyboard */,
 				EDAF29B4233BAA33007EB1C1 /* Info.plist */,
-				24D6127F23AAB19C00E66D5D /* GoogleService-Info.plist */,
 			);
 			path = ArtConnections;
 			sourceTree = "<group>";
@@ -348,7 +345,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDAF29B3233BAA33007EB1C1 /* LaunchScreen.storyboard in Resources */,
-				24D6128023AAB19C00E66D5D /* GoogleService-Info.plist in Resources */,
 				EDAF29B0233BAA33007EB1C1 /* Assets.xcassets in Resources */,
 				EDAF29AE233BAA31007EB1C1 /* Main.storyboard in Resources */,
 			);
