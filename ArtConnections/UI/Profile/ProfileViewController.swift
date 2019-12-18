@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController, StoryboardLoadedViewController {
     
@@ -21,14 +22,25 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        if let userName = viewModel.user?.name {
-            userNameLabel.text = userName
-        }
-        // Do any additional setup after loading the view.
-        
-        // save image in user-defaults or as a file on directory
+        viewModel.getUserdetails()
     }
+    
+    func updateView() {
+        self.userNameLabel.text = viewModel.name
+        self.diciplineLabel.text = viewModel.specialty
+        self.aboutTheUserView.text = viewModel.profile
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+    }
+}
 
+extension ProfileViewController: ViewModelDelegate {
+    
+    func viewModelDidUpdate() {
+        //Put activity indicator stop here
+        updateView()
+    }
 }

@@ -24,6 +24,7 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
     
     override func viewDidLoad() {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        //Need to add back button
         continueButton.isEnabled = false
         emailTextField.delegate = self
         [emailTextField, nameTextField, specialtyTextField, passwordTextField].forEach( {$0?.addTarget(self, action: #selector(continueButtonIsEnabled), for: .editingChanged)} )

@@ -30,23 +30,23 @@ class AdditionalDetailsViewModel: ViewModel {
                 print("There was an error creating the user: \(error.localizedDescription)")
             } else {
                 let database = Firestore.firestore()
-                var reference: DocumentReference? = nil
+                let userId = Auth.auth().currentUser?.uid
                 
-                reference = database.collection("users").addDocument(data: [
-                    "name": self.userObject.name,
-                    "profileImage": "Image String here",
-                    "profileInfo": profile,
-                    "specialty": self.userObject.specialty,
-                    "website": website,
-                    "uid": result!.user.uid
-                ], completion: { (error) in
-                    if error != nil {
-                        print("Userdata error when saving to database: \(error?.localizedDescription)")
-                    } else {
-                        print("User created")
-                    }
-                })
-                self.coordinator?.present(ProfileCoordinator())
+                if let id = userId {
+                    database.collection("users").document(id).setData([
+                        "name": self.userObject.name,
+                        "profileImage": "Image String here",
+                        "profileInfo": profile,
+                        "specialty": self.userObject.specialty,
+                        "website": website,
+                        "uid": result!.user.uid
+                    ])
+                    self.coordinator?.present(ProfileCoordinator())
+                } else {
+                    print("Error creating document")
+                }
+                
+                
             }
         }
     }
