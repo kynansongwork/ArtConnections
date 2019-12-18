@@ -13,4 +13,9 @@ struct Constants {
     struct SignInFlow {
         static let invalidEmail = "Your email is not valid"
     }
+    
+    struct LoadingView {
+        static let loading = "Loading"
+        static let genericMessage = "Please wait, processing"
+    }
 }

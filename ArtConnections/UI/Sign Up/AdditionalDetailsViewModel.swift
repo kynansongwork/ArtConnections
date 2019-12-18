@@ -45,8 +45,6 @@ class AdditionalDetailsViewModel: ViewModel {
                 } else {
                     print("Error creating document")
                 }
-                
-                
             }
         }
     }
