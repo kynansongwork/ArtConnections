@@ -36,7 +36,10 @@ class LoginViewController: KeyboardViewController, StoryboardLoadedViewControlle
     
     @IBAction func signInTapped(_ sender: Any) {
         //Navigate to login flow
-        viewModel.coordinator?.transition(LoginRef.Profile)
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            viewModel.signIn(email: email, password: password)
+        }
+        
     }
     
     @IBAction func signUpTapped(_ sender: Any) {

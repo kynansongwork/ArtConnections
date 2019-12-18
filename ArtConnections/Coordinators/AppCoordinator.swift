@@ -15,6 +15,11 @@ enum BaseTransitionRef: TransitionRef {
 
 class AppCoordinator: BaseCoordinator {
     
+    let tabBarController = UITabBarController()
+    
+    var profileCoordinator: ProfileCoordinator?
+    let profileItem = UITabBarItem(title: "Profile", image: UIImage(named: "icTabProfileActive"), tag: 0)
+    
     init() {
         let viewController = WelcomeViewController.instantiateFromStoryBoard(storyboard: .Main, with: ViewModel())
         super.init(rootViewController: viewController)
@@ -31,6 +36,14 @@ class AppCoordinator: BaseCoordinator {
         default:
             break
         }
+    }
+    
+    func enterTheApp() {
+        profileCoordinator = ProfileCoordinator()
+        profileCoordinator?.parentCoordinator = self
+        profileCoordinator!.rootViewController.tabBarItem = profileItem
+        
+        tabBarController.viewControllers = [profileCoordinator!.rootViewController]
     }
 }
 
