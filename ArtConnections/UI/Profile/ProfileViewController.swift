@@ -19,8 +19,8 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
     @IBOutlet weak var diciplineLabel: UILabel!
     @IBOutlet weak var portfolioCollectionView: UICollectionView!
     @IBOutlet weak var aboutTheUserView: UITextView!
+    @IBOutlet weak var websiteLabel: UILabel!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -33,6 +33,7 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
         self.userNameLabel.text = viewModel.name
         self.diciplineLabel.text = viewModel.specialty
         self.aboutTheUserView.text = viewModel.profile
+        self.websiteLabel.text = viewModel.website
     }
     
     override func viewWillLayoutSubviews() {
