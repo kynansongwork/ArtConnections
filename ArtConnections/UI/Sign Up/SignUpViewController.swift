@@ -36,6 +36,7 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
             .foregroundColor: UIColor.red
         ])
         
+        emailNotValidLabel.text = Constants.SignInFlow.invalidEmail
         emailNotValidLabel.isHidden = true
     }
     

@@ -16,14 +16,17 @@ class LoginViewController: KeyboardViewController, StoryboardLoadedViewControlle
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var invalidEmailLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTextField.delegate = self
         signInButton.isEnabled = false
         [emailTextField, passwordTextField].forEach( {$0?.addTarget(self, action: #selector(loginButtonIsEnabled), for: .editingChanged)} )
 
-        // Do any additional setup after loading the view.
+        invalidEmailLabel.text = Constants.SignInFlow.invalidEmail
+        invalidEmailLabel.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,7 +64,34 @@ class LoginViewController: KeyboardViewController, StoryboardLoadedViewControlle
         if viewModel.validateEmail(email) {
            signInButton.isEnabled = true
         } else {
-            signInButton.isEnabled = false
+           signInButton.isEnabled = false
+        }
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let validEmail = emailTextField.text {
+            if viewModel.validateEmail(validEmail) {
+                print("valid email")
+                invalidEmailLabel.isHidden = true
+                return true
+            } else {
+                print("email is invalid")
+                invalidEmailLabel.isHidden = false
+                return false
+            }
+        }
+        return false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let emailText = textField.text {
+            if viewModel.validateEmail(emailText) {
+                invalidEmailLabel.isHidden = true
+            } else {
+                invalidEmailLabel.isHidden = false
+            }
         }
     }
 }

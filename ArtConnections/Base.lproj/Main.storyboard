@@ -73,6 +73,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your email is not valid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GC-YX-orG">
+                                <rect key="frame" x="103.5" y="473" width="165.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -85,11 +91,14 @@
                             <constraint firstItem="uuq-14-4wo" firstAttribute="top" secondItem="9dK-pe-NG4" secondAttribute="bottom" constant="80" id="cM7-3y-p84"/>
                             <constraint firstItem="OAS-6G-9MH" firstAttribute="top" secondItem="Z2J-t5-hk1" secondAttribute="bottom" constant="8" id="ieV-BS-gf1"/>
                             <constraint firstItem="OAS-6G-9MH" firstAttribute="centerX" secondItem="wat-fl-NTl" secondAttribute="centerX" id="oya-FS-cbu"/>
+                            <constraint firstItem="1GC-YX-orG" firstAttribute="top" secondItem="OAS-6G-9MH" secondAttribute="bottom" constant="8" id="ur7-Sv-7cx"/>
+                            <constraint firstItem="1GC-YX-orG" firstAttribute="leading" secondItem="Z2J-t5-hk1" secondAttribute="leading" id="xsf-Ze-YPd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eMz-oe-AJa"/>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="Z2J-t5-hk1" id="GzC-fU-T2Y"/>
+                        <outlet property="invalidEmailLabel" destination="1GC-YX-orG" id="Qng-in-fCI"/>
                         <outlet property="passwordTextField" destination="OAS-6G-9MH" id="wMd-O5-IgQ"/>
                         <outlet property="signInButton" destination="9dK-pe-NG4" id="fLp-R5-2KI"/>
                     </connections>

@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         if let userName = viewModel.user?.name {
             userNameLabel.text = userName
         }

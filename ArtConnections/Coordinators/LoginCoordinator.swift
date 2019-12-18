@@ -17,11 +17,8 @@ enum LoginRef: TransitionRef {
 
 class LoginCoordinator: BaseCoordinator {
     
-    let cognitoService: CognitoService
-    
     required init () {
         let viewController = LoginViewController.instantiateFromStoryBoard(storyboard: .Main, with: LoginViewModel())
-        cognitoService = CognitoService()
         super.init(rootViewController: viewController)
     }
     

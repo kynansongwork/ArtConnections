@@ -42,6 +42,8 @@ class AdditionalDetailsViewModel: ViewModel {
                 ], completion: { (error) in
                     if error != nil {
                         print("Userdata error when saving to database: \(error?.localizedDescription)")
+                    } else {
+                        print("User created")
                     }
                 })
                 self.coordinator?.present(ProfileCoordinator())

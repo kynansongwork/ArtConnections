@@ -18,9 +18,9 @@
 		ED568621234E1A1D0003A160 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED568620234E1A1D0003A160 /* SignUpViewModel.swift */; };
 		ED5D436F2397B3F500E74708 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D436E2397B3F400E74708 /* UIImageExtensions.swift */; };
 		ED5D43712397C14700E74708 /* S3Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D43702397C14700E74708 /* S3Service.swift */; };
+		ED89B2FD23AA257B00684745 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B2FC23AA257B00684745 /* Constants.swift */; };
 		EDADDE35234B2BB400DA614D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDADDE34234B2BB400DA614D /* LoginViewModel.swift */; };
 		EDAF29A9233BAA31007EB1C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29A8233BAA31007EB1C1 /* AppDelegate.swift */; };
-		EDAF29AB233BAA31007EB1C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29AA233BAA31007EB1C1 /* ViewController.swift */; };
 		EDAF29AE233BAA31007EB1C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAF29AC233BAA31007EB1C1 /* Main.storyboard */; };
 		EDAF29B0233BAA33007EB1C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDAF29AF233BAA33007EB1C1 /* Assets.xcassets */; };
 		EDAF29B3233BAA33007EB1C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAF29B1233BAA33007EB1C1 /* LaunchScreen.storyboard */; };
@@ -56,10 +56,10 @@
 		ED568620234E1A1D0003A160 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		ED5D436E2397B3F400E74708 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		ED5D43702397C14700E74708 /* S3Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3Service.swift; sourceTree = "<group>"; };
+		ED89B2FC23AA257B00684745 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EDADDE34234B2BB400DA614D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EDAF29A5233BAA31007EB1C1 /* ArtConnections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtConnections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAF29A8233BAA31007EB1C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDAF29AA233BAA31007EB1C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDAF29AD233BAA31007EB1C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDAF29AF233BAA33007EB1C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDAF29B2233BAA33007EB1C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -149,6 +149,7 @@
 		ED032C7C2356192000C48203 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ED89B2FB23AA256C00684745 /* Utilities */,
 				ED032C7D2356193500C48203 /* KeyboardViewController.swift */,
 			);
 			path = Components;
@@ -171,6 +172,14 @@
 				EDE2DFC6238BECE300C14BDA /* AdditionalDetailsViewModel.swift */,
 			);
 			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		ED89B2FB23AA256C00684745 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				ED89B2FC23AA257B00684745 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		EDAF299C233BAA31007EB1C1 = {
@@ -202,7 +211,6 @@
 				EDAF29BB233BAA4C007EB1C1 /* UI */,
 				EDAF29BA233BAA41007EB1C1 /* Coordinators */,
 				EDAF29A8233BAA31007EB1C1 /* AppDelegate.swift */,
-				EDAF29AA233BAA31007EB1C1 /* ViewController.swift */,
 				EDAF29AC233BAA31007EB1C1 /* Main.storyboard */,
 				EDAF29AF233BAA33007EB1C1 /* Assets.xcassets */,
 				EDAF29B1233BAA33007EB1C1 /* LaunchScreen.storyboard */,
@@ -400,9 +408,9 @@
 				EDAF29C0233BAB45007EB1C1 /* AppCoordinator.swift in Sources */,
 				EDAF29CE233BB6AC007EB1C1 /* LoginCoordinator.swift in Sources */,
 				2443F3E923993D21003A7939 /* FirebaseServices.swift in Sources */,
+				ED89B2FD23AA257B00684745 /* Constants.swift in Sources */,
 				EDAF29CC233BB447007EB1C1 /* ProfileViewModel.swift in Sources */,
 				2491701B2382BB1C00BA81AE /* UserPool.swift in Sources */,
-				EDAF29AB233BAA31007EB1C1 /* ViewController.swift in Sources */,
 				EDADDE35234B2BB400DA614D /* LoginViewModel.swift in Sources */,
 				ED56861F234E19F40003A160 /* SignUpViewController.swift in Sources */,
 				EDD46A68237D9190005D600F /* CognitoService.swift in Sources */,
