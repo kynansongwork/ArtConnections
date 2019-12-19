@@ -48,7 +48,7 @@ class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedV
     
     @IBAction func completeSignUpTapped(_ sender: Any) {
         if let profileImage = profileImageView.image, let profileText = profileTextInputView.text, let website = websiteTextField.text {
-          viewModel.saveUserDetails(profile: profileText, website: website, image: profileImage)
+            viewModel.saveUserDetails(profile: profileText, website: website, image: profileImage, userObject: viewModel.userObject)
         }
         dismissKeyboard()
     }
@@ -80,7 +80,7 @@ extension AdditionalDetailsViewController: UIImagePickerControllerDelegate, UINa
     func selectImage(sourceType: UIImagePickerController.SourceType) {
         let imagePickerController =  UIImagePickerController()
         imagePickerController.delegate = self
-        imagePickerController.allowsEditing = false
+        imagePickerController.allowsEditing = true
         imagePickerController.sourceType = sourceType
         present(imagePickerController, animated: true, completion: nil)
     }
