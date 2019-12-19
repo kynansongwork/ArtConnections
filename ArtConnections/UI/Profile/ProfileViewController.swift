@@ -24,9 +24,18 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        setUpImageView()
         loadingOverlay = LoadingWindowView(withTitle: "Loading", withSubtitle: "Please wait, processing")
         loadingOverlay?.show()
         viewModel.getUserdetails()
+    }
+    
+    func setUpImageView() {
+        profileImageView.layer.borderWidth = 1.0
+        profileImageView.layer.masksToBounds = false
+        profileImageView.layer.borderColor = UIColor.white.cgColor
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
+        profileImageView.clipsToBounds = true
     }
     
     func updateView() {
