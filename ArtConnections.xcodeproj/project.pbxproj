@@ -38,6 +38,7 @@
 		EDAF29CE233BB6AC007EB1C1 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */; };
 		EDBCAED123859966003E6F20 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCAED023859966003E6F20 /* SignUpCoordinator.swift */; };
 		EDBCAED323859BDC003E6F20 /* AdditionalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCAED223859BDC003E6F20 /* AdditionalDetailsViewController.swift */; };
+		EDC5D6F623ABD61F003AAF96 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC5D6F523ABD61F003AAF96 /* UIImageViewExtensions.swift */; };
 		EDD46A68237D9190005D600F /* CognitoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD46A67237D9190005D600F /* CognitoService.swift */; };
 		EDD76FE323796EC90037A65D /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE223796EC90037A65D /* UserObject.swift */; };
 		EDD76FE62379729C0037A65D /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76FE52379729C0037A65D /* DataFetcher.swift */; };
@@ -80,6 +81,7 @@
 		EDAF29CD233BB6AC007EB1C1 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginCoordinator.swift; path = Coordinators/LoginCoordinator.swift; sourceTree = "<group>"; };
 		EDBCAED023859966003E6F20 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		EDBCAED223859BDC003E6F20 /* AdditionalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalDetailsViewController.swift; sourceTree = "<group>"; };
+		EDC5D6F523ABD61F003AAF96 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		EDD46A67237D9190005D600F /* CognitoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoService.swift; sourceTree = "<group>"; };
 		EDD76FE223796EC90037A65D /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		EDD76FE52379729C0037A65D /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				ED032C7A235603EA00C48203 /* ValidationManager.swift */,
 				ED5D436E2397B3F400E74708 /* UIImageExtensions.swift */,
+				EDC5D6F523ABD61F003AAF96 /* UIImageViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				EDD76FE62379729C0037A65D /* DataFetcher.swift in Sources */,
 				EDAF29C6233BACC2007EB1C1 /* ViewModel.swift in Sources */,
 				EDD76FE323796EC90037A65D /* UserObject.swift in Sources */,
+				EDC5D6F623ABD61F003AAF96 /* UIImageViewExtensions.swift in Sources */,
 				ED032C7B235603EA00C48203 /* ValidationManager.swift in Sources */,
 				EDBCAED323859BDC003E6F20 /* AdditionalDetailsViewController.swift in Sources */,
 				ED56861C234CDC890003A160 /* WelcomeViewController.swift in Sources */,

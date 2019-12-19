@@ -34,6 +34,13 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
         self.diciplineLabel.text = viewModel.specialty
         self.aboutTheUserView.text = viewModel.profile
         self.websiteLabel.text = viewModel.website
+        
+        if let url = viewModel.imageUrl {
+            //Need to improve image load time
+            self.profileImageView.load(url: url)
+        } else {
+            self.profileImageView.image = UIImage(named: "placeHolderImage2")
+        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -44,7 +51,6 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
 extension ProfileViewController: ViewModelDelegate {
     
     func viewModelDidUpdate() {
-        //Put activity indicator stop here
         updateView()
         loadingOverlay?.hide()
     }

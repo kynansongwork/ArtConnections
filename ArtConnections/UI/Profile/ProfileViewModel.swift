@@ -17,7 +17,7 @@ class ProfileViewModel: ViewModel {
     var specialty: String = "No specialty"
     var profile: String = "No profile"
     var website: String = "No website"
-    //var imageUrl: String
+    var imageUrl: URL?
     
     override init() {
         super.init()
@@ -37,10 +37,13 @@ class ProfileViewModel: ViewModel {
                     
                     let profileData = document?.data()
                     
+                    let profileImageString = profileData!["profileImage"]! as? String ?? "No name"
+                    
                     self.name = profileData!["name"]! as? String ?? "No name"
                     self.specialty = profileData!["specialty"]! as? String ?? "No specialty"
                     self.profile = profileData!["profileInfo"]! as? String ?? "No name"
                     self.website = profileData!["website"]! as? String ?? "No name"
+                    self.imageUrl = URL(string: profileImageString)
                     self.delegate?.viewModelDidUpdate()
                 } else {
                     print("Document doesn't exist")
