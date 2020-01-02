@@ -44,10 +44,12 @@ class FirebaseServices {
                     if let error = error {
                         //add alert here
                         print("There was an error downloading \(error)")
+                        coordinator.presentAlert(title: "Download error", message: "There was an error downloading \(error)")
                     }
                     
                     guard let downloadUrl = url else {
                         print("Error with the download url")
+                        coordinator.presentAlert(title: "Download error", message: "Error with the download url")
                         return
                     }
                     
@@ -67,6 +69,7 @@ class FirebaseServices {
             if let error = error {
                 //Show alert here
                 print("There was an error creating the user: \(error.localizedDescription)")
+                coordinator.presentAlert(title: "Creation error", message: "There was an error creating the user: \(error.localizedDescription)")
             } else {
                 let database = Firestore.firestore()
                 let userId = Auth.auth().currentUser?.uid
