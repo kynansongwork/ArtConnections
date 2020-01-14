@@ -27,6 +27,7 @@ class LoginViewModel: ViewModel {
             if error != nil {
                 //Need to add label or alert to surface error
                 print("Sign in error: \(error?.localizedDescription)")
+                self.coordinator?.presentAlert(title: "Sign in error", message: "There was an signing in: \(error?.localizedDescription)")
             } else {
                 print("User signed in")
                 self.coordinator?.transition(LoginRef.Profile)

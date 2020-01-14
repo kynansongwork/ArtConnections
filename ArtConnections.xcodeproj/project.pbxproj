@@ -17,6 +17,7 @@
 		ED032C7B235603EA00C48203 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED032C7A235603EA00C48203 /* ValidationManager.swift */; };
 		ED032C7E2356193500C48203 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED032C7D2356193500C48203 /* KeyboardViewController.swift */; };
 		ED0417DF23AB73E3008A5C28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED0417DE23AB73E3008A5C28 /* GoogleService-Info.plist */; };
+		ED35C7F523CDEC2D00E600AC /* UIAlertExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED35C7F423CDEC2D00E600AC /* UIAlertExtensions.swift */; };
 		ED56861C234CDC890003A160 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861B234CDC890003A160 /* WelcomeViewController.swift */; };
 		ED56861F234E19F40003A160 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861E234E19F40003A160 /* SignUpViewController.swift */; };
 		ED568621234E1A1D0003A160 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED568620234E1A1D0003A160 /* SignUpViewModel.swift */; };
@@ -59,6 +60,7 @@
 		ED032C7A235603EA00C48203 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		ED032C7D2356193500C48203 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		ED0417DE23AB73E3008A5C28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED35C7F423CDEC2D00E600AC /* UIAlertExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertExtensions.swift; sourceTree = "<group>"; };
 		ED56861B234CDC890003A160 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		ED56861E234E19F40003A160 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		ED568620234E1A1D0003A160 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				ED032C7A235603EA00C48203 /* ValidationManager.swift */,
 				ED5D436E2397B3F400E74708 /* UIImageExtensions.swift */,
 				EDC5D6F523ABD61F003AAF96 /* UIImageViewExtensions.swift */,
+				ED35C7F423CDEC2D00E600AC /* UIAlertExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				EDD46A68237D9190005D600F /* CognitoService.swift in Sources */,
 				EDE2DFC7238BECE400C14BDA /* AdditionalDetailsViewModel.swift in Sources */,
 				EDAF29BD233BAAC2007EB1C1 /* ProfileCoordinator.swift in Sources */,
+				ED35C7F523CDEC2D00E600AC /* UIAlertExtensions.swift in Sources */,
 				EDAF29CA233BB3CC007EB1C1 /* ProfileViewController.swift in Sources */,
 				ED032C7E2356193500C48203 /* KeyboardViewController.swift in Sources */,
 				EDAF29A9233BAA31007EB1C1 /* AppDelegate.swift in Sources */,
