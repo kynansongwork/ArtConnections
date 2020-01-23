@@ -42,13 +42,7 @@ class LoginCoordinator: BaseCoordinator {
 extension LoginCoordinator {
     
     func showProfilePage() {
-        let controller = ProfileViewController.instantiateFromStoryBoard(storyboard: .Main, with: ProfileViewModel())
-
-        if #available(iOS 13, *) {
-          controller.isModalInPresentation = true
-        }
-        
-        self.show(controller)
+        present(ProfileCoordinator())
     }
     
     func presentSignUpFlow() {
