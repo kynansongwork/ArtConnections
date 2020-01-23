@@ -98,7 +98,10 @@ class FirebaseServices {
             print("There was an issue logging out: \(logOutError)")
         }
         
-        coordinator.present(AppCoordinator())
+        coordinator.dismiss(completion: {
+            coordinator.present(AppCoordinator())
+        })
+        
     }
     
 }

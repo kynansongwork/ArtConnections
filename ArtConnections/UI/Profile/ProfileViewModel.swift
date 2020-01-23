@@ -18,6 +18,7 @@ class ProfileViewModel: ViewModel {
     var profile: String = "No profile"
     var website: String = "No website"
     var imageUrl: URL?
+    let firebaseService = FirebaseServices()
     
     override init() {
         super.init()
@@ -50,6 +51,12 @@ class ProfileViewModel: ViewModel {
                 }
             })
        }
+    }
+    
+    func logOut() {
+        if let coordinator = self.coordinator {
+            firebaseService.logOut(coordinator: coordinator)
+        }
     }
     
 }

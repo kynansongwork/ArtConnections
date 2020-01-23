@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class WelcomeViewController: UIViewController, StoryboardLoadedViewController {
     var viewModel: ViewModel!
@@ -17,6 +18,11 @@ class WelcomeViewController: UIViewController, StoryboardLoadedViewController {
     }
     
     @IBAction func welcomeButtonTapped(_ sender: Any) {
-        viewModel.coordinator?.transition(BaseTransitionRef.Login)
+        if Auth.auth().currentUser != nil {
+            viewModel.coordinator?.transition(BaseTransitionRef.SignedIn)
+        } else {
+            viewModel.coordinator?.transition(BaseTransitionRef.Login)
+        }
+        
     }
 }

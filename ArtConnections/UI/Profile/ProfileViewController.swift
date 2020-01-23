@@ -55,6 +55,10 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
     }
+    
+    @IBAction func logOutTapped(_ sender: Any) {
+        viewModel.logOut()
+    }
 }
 
 extension ProfileViewController: ViewModelDelegate {

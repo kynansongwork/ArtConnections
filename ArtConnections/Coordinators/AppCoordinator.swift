@@ -11,6 +11,7 @@ import UIKit
 
 enum BaseTransitionRef: TransitionRef {
     case Login
+    case SignedIn
 }
 
 class AppCoordinator: BaseCoordinator {
@@ -33,6 +34,8 @@ class AppCoordinator: BaseCoordinator {
         switch transition {
         case .Login:
             presentLoginFlow()
+        case .SignedIn:
+            presetProfile()
         default:
             break
         }
@@ -52,5 +55,10 @@ extension AppCoordinator {
     func presentLoginFlow() {
         let loginCoordinator = LoginCoordinator()
         try? present(loginCoordinator)
+    }
+    
+    func presetProfile() {
+        let profileCoordinator = ProfileCoordinator()
+        try? present(profileCoordinator)
     }
 }
