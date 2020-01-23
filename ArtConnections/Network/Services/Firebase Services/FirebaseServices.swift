@@ -97,11 +97,7 @@ class FirebaseServices {
         } catch let logOutError {
             print("There was an issue logging out: \(logOutError)")
         }
-        
-        coordinator.dismiss(completion: {
-            coordinator.present(AppCoordinator())
-        })
-        
+        coordinator.dismiss()
     }
     
 }

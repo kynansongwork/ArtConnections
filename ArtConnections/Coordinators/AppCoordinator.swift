@@ -53,12 +53,10 @@ class AppCoordinator: BaseCoordinator {
 extension AppCoordinator {
     
     func presentLoginFlow() {
-        let loginCoordinator = LoginCoordinator()
-        try? present(loginCoordinator)
+        present(LoginCoordinator())
     }
     
     func presetProfile() {
-        let profileCoordinator = ProfileCoordinator()
-        try? present(profileCoordinator)
+        present(ProfileCoordinator())
     }
 }

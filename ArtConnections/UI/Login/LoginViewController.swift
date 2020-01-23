@@ -12,6 +12,7 @@ import Firebase
 class LoginViewController: KeyboardViewController, StoryboardLoadedViewController {
     
     var viewModel: LoginViewModel!
+    var loadingOverlay: LoadingWindowView?
     
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
