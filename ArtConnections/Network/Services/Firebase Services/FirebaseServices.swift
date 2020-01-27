@@ -22,9 +22,9 @@ class FirebaseServices {
             return
         }
         
-        if let user = Auth.auth().currentUser?.uid {
+        //if let user = Auth.auth().currentUser?.uid {
             let imageName = UUID().uuidString
-            let imageReference = storage.reference().child(user + "/profileImages/" + imageName)
+        let imageReference = storage.reference().child(userObject.email + "/profileImages/" + imageName)
             let metaDataForImage = StorageMetadata()
             metaDataForImage.contentType = "image/jpeg"
             
@@ -58,7 +58,7 @@ class FirebaseServices {
                     self.saveUserDetails(profile: profile, website: website, image: imageURL, userObject: userObject, coordinator: coordinator)
                 }
             })
-        }
+        //}
     }
     
     func saveUserDetails(profile: String, website: String, image: String, userObject: UserObject, coordinator: BaseCoordinator) {
