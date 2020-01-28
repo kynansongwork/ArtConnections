@@ -17,7 +17,7 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var specialtyTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var continueButton: RoundedButton!
     @IBOutlet weak var emailTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var emailNotValidLabel: UILabel!
     @IBOutlet weak var passwordInfoLabel: UILabel!

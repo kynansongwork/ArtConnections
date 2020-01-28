@@ -18,6 +18,7 @@
 		ED032C7E2356193500C48203 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED032C7D2356193500C48203 /* KeyboardViewController.swift */; };
 		ED0417DF23AB73E3008A5C28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED0417DE23AB73E3008A5C28 /* GoogleService-Info.plist */; };
 		ED35C7F523CDEC2D00E600AC /* UIAlertExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED35C7F423CDEC2D00E600AC /* UIAlertExtensions.swift */; };
+		ED48BD1A23E0813300F69F46 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48BD1923E0813300F69F46 /* RoundedButton.swift */; };
 		ED56861C234CDC890003A160 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861B234CDC890003A160 /* WelcomeViewController.swift */; };
 		ED56861F234E19F40003A160 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861E234E19F40003A160 /* SignUpViewController.swift */; };
 		ED568621234E1A1D0003A160 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED568620234E1A1D0003A160 /* SignUpViewModel.swift */; };
@@ -61,6 +62,7 @@
 		ED032C7D2356193500C48203 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		ED0417DE23AB73E3008A5C28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED35C7F423CDEC2D00E600AC /* UIAlertExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertExtensions.swift; sourceTree = "<group>"; };
+		ED48BD1923E0813300F69F46 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ED56861B234CDC890003A160 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		ED56861E234E19F40003A160 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		ED568620234E1A1D0003A160 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				24D6127C23AAAFF200E66D5D /* CustomActivityIndicator.swift */,
 				24D6127B23AAAFF200E66D5D /* LoadingWindowView.swift */,
 				24E8FB6C23BA2C39006C26F0 /* ErrorAlertComponent.swift */,
+				ED48BD1923E0813300F69F46 /* RoundedButton.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				EDAF29C0233BAB45007EB1C1 /* AppCoordinator.swift in Sources */,
 				24E8FB6D23BA2C39006C26F0 /* ErrorAlertComponent.swift in Sources */,
 				EDAF29CE233BB6AC007EB1C1 /* LoginCoordinator.swift in Sources */,
+				ED48BD1A23E0813300F69F46 /* RoundedButton.swift in Sources */,
 				2443F3E923993D21003A7939 /* FirebaseServices.swift in Sources */,
 				ED89B2FD23AA257B00684745 /* Constants.swift in Sources */,
 				EDAF29CC233BB447007EB1C1 /* ProfileViewModel.swift in Sources */,
@@ -592,8 +596,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSM2D4RUSA;
+				DEVELOPMENT_TEAM = QZ9QPXJTXV;
 				INFOPLIST_FILE = ArtConnections/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -613,6 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZSM2D4RUSA;
 				INFOPLIST_FILE = ArtConnections/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

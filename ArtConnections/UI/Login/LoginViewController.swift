@@ -14,7 +14,7 @@ class LoginViewController: KeyboardViewController, StoryboardLoadedViewControlle
     var viewModel: LoginViewModel!
     var loadingOverlay: LoadingWindowView?
     
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signInButton: RoundedButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var invalidEmailLabel: UILabel!
