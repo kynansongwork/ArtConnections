@@ -73,7 +73,9 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
     
     @IBAction func signInButtonTapped(_ sender: Any) {
         print("Sign in tapped")
+        viewModel.coordinator?.transition(ProfileRef.SignIn)
     }
+    
     @IBAction func logOutTapped(_ sender: Any) {
         viewModel.logOut()
     }

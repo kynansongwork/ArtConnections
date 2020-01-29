@@ -20,6 +20,7 @@ protocol TransitionRef {}
 class BaseCoordinator {
     weak var parentCoordinator: BaseCoordinator?
     var children: [BaseCoordinator] = []
+    var overlayWindow: UIWindow?
     private(set) var rootViewController: UIViewController
     
     init<T: ModelledViewController>(rootViewController: T) {
@@ -44,6 +45,19 @@ class BaseCoordinator {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         alertController.presentInOwnWindow(animated: true, completion: nil)
+    }
+    
+    func presentCard() {
+        overlayWindow = UIWindow(frame: UIScreen.main.bounds)
+        let controller = AuthView.instantiateFromStoryBoard(storyboard: .Main, with: ViewModel())
+        //controller.delegate = self
+        controller.modalPresentationStyle = .overCurrentContext
+        //controller.transitioningDelegate = controller
+        let bgController = UIViewController()
+        overlayWindow?.rootViewController = bgController
+        overlayWindow?.makeKeyAndVisible()
+        
+        bgController.present(controller, animated: true, completion: nil)
     }
     
     final func present(_ child: BaseCoordinator, completion: (() -> Void)? = nil) {

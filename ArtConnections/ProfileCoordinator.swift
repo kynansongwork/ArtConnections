@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 enum ProfileRef: TransitionRef {
-
+    case SignIn
 }
 
 class ProfileCoordinator: BaseCoordinator {
@@ -24,10 +24,18 @@ class ProfileCoordinator: BaseCoordinator {
         guard let transition = transition as? ProfileRef else {
             return
         }
+        
+        switch transition {
+        case .SignIn:
+            showSignInCard()
+            break
+        }
     }
     
 }
 
 extension ProfileCoordinator {
-    
+    func showSignInCard() {
+        presentCard()
+    }
 }

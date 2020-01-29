@@ -632,6 +632,64 @@
             </objects>
             <point key="canvasLocation" x="1578.4000000000001" y="20.239880059970016"/>
         </scene>
+        <!--Auth View-->
+        <scene sceneID="oBq-1Q-KEV">
+            <objects>
+                <viewController storyboardIdentifier="AuthView" id="CDn-i4-gLX" customClass="AuthView" customModule="ArtConnections" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mkm-G5-hQC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZC7-jQ-jHZ">
+                                <rect key="frame" x="16" y="236" width="343" height="195"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RV-AY-m2T">
+                                        <rect key="frame" x="30" y="112" width="74" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugR-ke-YKz">
+                                        <rect key="frame" x="148.5" y="143" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sx2-T0-TGh">
+                                        <rect key="frame" x="30" y="71" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3RV-AY-m2T" secondAttribute="bottom" constant="62" id="9GA-RT-jm7"/>
+                                    <constraint firstItem="3RV-AY-m2T" firstAttribute="top" secondItem="sx2-T0-TGh" secondAttribute="bottom" constant="20" id="aJU-21-mOp"/>
+                                    <constraint firstItem="sx2-T0-TGh" firstAttribute="leading" secondItem="ZC7-jQ-jHZ" secondAttribute="leading" constant="30" id="bFF-o3-P8C"/>
+                                    <constraint firstAttribute="bottom" secondItem="ugR-ke-YKz" secondAttribute="bottom" constant="22" id="jmg-WW-am5"/>
+                                    <constraint firstItem="ugR-ke-YKz" firstAttribute="centerX" secondItem="ZC7-jQ-jHZ" secondAttribute="centerX" id="nfa-T0-cZf"/>
+                                    <constraint firstItem="sx2-T0-TGh" firstAttribute="top" secondItem="ZC7-jQ-jHZ" secondAttribute="top" constant="71" id="ou4-Oz-6AN"/>
+                                    <constraint firstItem="3RV-AY-m2T" firstAttribute="leading" secondItem="sx2-T0-TGh" secondAttribute="leading" id="pXe-tw-Uq8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zpR-Cn-GuO" firstAttribute="trailing" secondItem="ZC7-jQ-jHZ" secondAttribute="trailing" constant="16" id="HSC-01-sa3"/>
+                            <constraint firstItem="ZC7-jQ-jHZ" firstAttribute="leading" secondItem="zpR-Cn-GuO" secondAttribute="leading" constant="16" id="PEz-Mb-Z9J"/>
+                            <constraint firstItem="ZC7-jQ-jHZ" firstAttribute="centerX" secondItem="mkm-G5-hQC" secondAttribute="centerX" id="TV4-Il-Ej1"/>
+                            <constraint firstItem="ZC7-jQ-jHZ" firstAttribute="top" secondItem="zpR-Cn-GuO" secondAttribute="top" constant="236" id="XHf-bN-C3y"/>
+                            <constraint firstItem="ZC7-jQ-jHZ" firstAttribute="centerY" secondItem="mkm-G5-hQC" secondAttribute="centerY" id="hyB-Mk-FCg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zpR-Cn-GuO"/>
+                    </view>
+                    <connections>
+                        <outlet property="authView" destination="ZC7-jQ-jHZ" id="asb-yM-OCT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbX-ak-fdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2528.8000000000002" y="15.742128935532236"/>
+        </scene>
     </scenes>
     <resources>
         <image name="placeHolderImage2" width="750" height="999"/>

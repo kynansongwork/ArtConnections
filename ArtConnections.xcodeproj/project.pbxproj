@@ -20,6 +20,7 @@
 		ED35C7F523CDEC2D00E600AC /* UIAlertExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED35C7F423CDEC2D00E600AC /* UIAlertExtensions.swift */; };
 		ED48BD1A23E0813300F69F46 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48BD1923E0813300F69F46 /* RoundedButton.swift */; };
 		ED48BD1C23E1888C00F69F46 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48BD1B23E1888C00F69F46 /* UnderlineTextField.swift */; };
+		ED54850923E1D83800A5DCDB /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54850823E1D83800A5DCDB /* AuthView.swift */; };
 		ED56861C234CDC890003A160 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861B234CDC890003A160 /* WelcomeViewController.swift */; };
 		ED56861F234E19F40003A160 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56861E234E19F40003A160 /* SignUpViewController.swift */; };
 		ED568621234E1A1D0003A160 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED568620234E1A1D0003A160 /* SignUpViewModel.swift */; };
@@ -65,6 +66,7 @@
 		ED35C7F423CDEC2D00E600AC /* UIAlertExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertExtensions.swift; sourceTree = "<group>"; };
 		ED48BD1923E0813300F69F46 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ED48BD1B23E1888C00F69F46 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		ED54850823E1D83800A5DCDB /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		ED56861B234CDC890003A160 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		ED56861E234E19F40003A160 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		ED568620234E1A1D0003A160 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -165,10 +167,19 @@
 		ED032C7C2356192000C48203 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ED54850723E1D82100A5DCDB /* Views */,
 				ED89B2FB23AA256C00684745 /* Utilities */,
 				ED032C7D2356193500C48203 /* KeyboardViewController.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		ED54850723E1D82100A5DCDB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED54850823E1D83800A5DCDB /* AuthView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ED568618234CDC590003A160 /* Welcome */ = {
@@ -444,6 +455,7 @@
 				ED35C7F523CDEC2D00E600AC /* UIAlertExtensions.swift in Sources */,
 				EDAF29CA233BB3CC007EB1C1 /* ProfileViewController.swift in Sources */,
 				ED032C7E2356193500C48203 /* KeyboardViewController.swift in Sources */,
+				ED54850923E1D83800A5DCDB /* AuthView.swift in Sources */,
 				EDAF29A9233BAA31007EB1C1 /* AppDelegate.swift in Sources */,
 				24D6127E23AAAFF200E66D5D /* CustomActivityIndicator.swift in Sources */,
 				EDD76FE62379729C0037A65D /* DataFetcher.swift in Sources */,
