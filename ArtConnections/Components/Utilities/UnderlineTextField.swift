@@ -66,10 +66,10 @@ import Foundation
 
         underline.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         underline.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        underline.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 3).isActive = true
+        underline.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 1).isActive = true
         underline.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 
-        underlineHeight = underline.heightAnchor.constraint(equalToConstant: 2)
+        underlineHeight = underline.heightAnchor.constraint(equalToConstant: 1)
         underlineHeight?.isActive = true
 
         label.setContentCompressionResistancePriority(.required, for: .horizontal)
@@ -80,11 +80,11 @@ import Foundation
     }
 
     override func textRect(forBounds bounds: CGRect) -> CGRect {
-        return CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.width, height: bounds.height - 10)
+        return CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.width, height: bounds.height - 8)
     }
 
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.width, height: bounds.height - 10)
+        return CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.width, height: bounds.height - 8)
     }
 
     override func layoutSubviews() {

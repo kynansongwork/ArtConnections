@@ -13,10 +13,10 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
     var viewModel: SignUpViewModel!
     var delegate = self
     
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var specialtyTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UnderlinedTextField!
+    @IBOutlet weak var nameTextField: UnderlinedTextField!
+    @IBOutlet weak var specialtyTextField: UnderlinedTextField!
+    @IBOutlet weak var passwordTextField: UnderlinedTextField!
     @IBOutlet weak var continueButton: RoundedButton!
     @IBOutlet weak var emailTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var emailNotValidLabel: UILabel!
@@ -27,6 +27,7 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
         //Need to add back button
         continueButton.isEnabled = false
         emailTextField.delegate = self
+        emailTextField.shouldValidate = true
         [emailTextField, nameTextField, specialtyTextField, passwordTextField].forEach( {$0?.addTarget(self, action: #selector(continueButtonIsEnabled), for: .editingChanged)} )
         
         let tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -39,6 +40,10 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
         
         emailNotValidLabel.text = Constants.SignInFlow.invalidEmail
         emailNotValidLabel.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     @objc func continueButtonIsEnabled(_ textField: UITextField) {
@@ -92,10 +97,12 @@ extension SignUpViewController: UITextFieldDelegate {
             if viewModel.validateEmail(validEmail) {
                 print("valid email")
                 emailNotValidLabel.isHidden = true
+                emailTextField.valid = true
                 return true
             } else {
                 print("email is invalid")
                 emailNotValidLabel.isHidden = false
+                emailTextField.valid = false
                 return false
             }
         }
@@ -106,8 +113,10 @@ extension SignUpViewController: UITextFieldDelegate {
         if let emailText = textField.text {
             if viewModel.validateEmail(emailText) {
                 emailNotValidLabel.isHidden = true
+                emailTextField.valid = true
             } else {
                 emailNotValidLabel.isHidden = false
+                emailTextField.valid = false
             }
         }
     }
