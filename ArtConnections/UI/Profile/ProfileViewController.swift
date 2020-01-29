@@ -8,11 +8,13 @@
 
 import UIKit
 import Firebase
+import SwiftInstagram
 
 class ProfileViewController: UIViewController, StoryboardLoadedViewController {
     
     var viewModel: ProfileViewModel!
     var loadingOverlay: LoadingWindowView?
+    let instagramApi = Instagram.shared
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -20,6 +22,7 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
     @IBOutlet weak var portfolioCollectionView: UICollectionView!
     @IBOutlet weak var aboutTheUserView: UITextView!
     @IBOutlet weak var websiteLabel: UILabel!
+    @IBOutlet weak var signInButton: RoundedButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,18 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
         loadingOverlay = LoadingWindowView(withTitle: "Loading", withSubtitle: "Please wait, processing")
         loadingOverlay?.show()
         viewModel.getUserdetails()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if !instagramApi.isAuthenticated {
+            print("Not authenticated")
+            portfolioCollectionView.isHidden = true
+            signInButton.isHidden = false
+        } else {
+            portfolioCollectionView.isHidden = false
+            signInButton.isHidden = true
+        }
     }
     
     func setUpImageView() {
@@ -56,6 +71,9 @@ class ProfileViewController: UIViewController, StoryboardLoadedViewController {
         super.viewWillLayoutSubviews()
     }
     
+    @IBAction func signInButtonTapped(_ sender: Any) {
+        print("Sign in tapped")
+    }
     @IBAction func logOutTapped(_ sender: Any) {
         viewModel.logOut()
     }

@@ -10,9 +10,11 @@ import Foundation
 import Firebase
 import FirebaseAuth
 import FirebaseStorage
+import SwiftInstagram
 
 class FirebaseServices {
     
+    let instagramApi = Instagram.shared
     let storage = Storage.storage()
     
     func uploadImage(profile: String, website: String, userObject: UserObject, image: UIImage?, coordinator: BaseCoordinator) {
@@ -94,6 +96,7 @@ class FirebaseServices {
     func logOut(coordinator: BaseCoordinator) {
         do {
             try Auth.auth().signOut()
+            instagramApi.logout()
         } catch let logOutError {
             print("There was an issue logging out: \(logOutError)")
         }

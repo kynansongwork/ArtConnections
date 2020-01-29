@@ -482,7 +482,7 @@
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ljl-th-g5D">
                                         <rect key="frame" x="29.5" y="407" width="316" height="111"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="316" id="0vC-Ck-JLx"/>
                                             <constraint firstAttribute="height" constant="111" id="Ypg-0Y-7FF"/>
@@ -571,6 +571,18 @@
                                             <action selector="logOutTapped:" destination="l5y-iz-HZV" eventType="touchUpInside" id="uNU-uy-McH"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="551-Fb-sa0" customClass="RoundedButton" customModule="ArtConnections" customModuleProvider="target">
+                                        <rect key="frame" x="107.5" y="447.5" width="160" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="NjW-2C-j3S"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Sign in to Instagram"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signInButtonTapped:" destination="l5y-iz-HZV" eventType="touchUpInside" id="q5a-5N-5dj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6MN-Gc-9lX" firstAttribute="centerX" secondItem="yLX-Hl-UbJ" secondAttribute="centerX" id="3t6-pd-cIu"/>
@@ -579,10 +591,12 @@
                                     <constraint firstAttribute="trailing" secondItem="pC9-dM-UwQ" secondAttribute="trailing" id="6en-eo-uwQ"/>
                                     <constraint firstItem="mnM-r5-9VJ" firstAttribute="top" secondItem="LAw-qt-mci" secondAttribute="bottom" constant="38" id="7KV-5J-cn3"/>
                                     <constraint firstItem="6MN-Gc-9lX" firstAttribute="centerX" secondItem="LAw-qt-mci" secondAttribute="centerX" id="90a-a4-itD"/>
+                                    <constraint firstItem="551-Fb-sa0" firstAttribute="centerX" secondItem="yLX-Hl-UbJ" secondAttribute="centerX" id="ATq-bV-8wm"/>
                                     <constraint firstItem="LAw-qt-mci" firstAttribute="leading" secondItem="yLX-Hl-UbJ" secondAttribute="leading" constant="87" id="Avm-ST-Xkx"/>
                                     <constraint firstItem="mnM-r5-9VJ" firstAttribute="centerX" secondItem="yLX-Hl-UbJ" secondAttribute="centerX" id="BQa-kd-H7X"/>
                                     <constraint firstItem="pC9-dM-UwQ" firstAttribute="top" secondItem="yLX-Hl-UbJ" secondAttribute="top" id="GNe-4g-QJE"/>
                                     <constraint firstAttribute="bottom" secondItem="pC9-dM-UwQ" secondAttribute="bottom" constant="482" id="IYj-ic-9UI"/>
+                                    <constraint firstItem="551-Fb-sa0" firstAttribute="centerY" secondItem="Ljl-th-g5D" secondAttribute="centerY" id="UOL-5H-BiU"/>
                                     <constraint firstItem="Rqn-3W-9mg" firstAttribute="centerX" secondItem="yLX-Hl-UbJ" secondAttribute="centerX" id="Ym1-ML-4At"/>
                                     <constraint firstItem="Tho-Ip-kal" firstAttribute="centerX" secondItem="yLX-Hl-UbJ" secondAttribute="centerX" id="b5X-Wc-K8I"/>
                                     <constraint firstItem="6MN-Gc-9lX" firstAttribute="top" secondItem="Ljl-th-g5D" secondAttribute="bottom" constant="19" id="gbt-3J-lx0"/>
@@ -609,13 +623,14 @@
                         <outlet property="diciplineLabel" destination="Oxh-Sh-oQy" id="4Ca-uQ-7ML"/>
                         <outlet property="portfolioCollectionView" destination="Ljl-th-g5D" id="WtI-Cs-T6n"/>
                         <outlet property="profileImageView" destination="l9x-Cf-JrO" id="xN1-ti-NPN"/>
+                        <outlet property="signInButton" destination="551-Fb-sa0" id="Qmi-4y-z5v"/>
                         <outlet property="userNameLabel" destination="yeJ-bB-9o8" id="lYp-CK-5uN"/>
                         <outlet property="websiteLabel" destination="mnM-r5-9VJ" id="8Po-2W-qQz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnC-T0-Vmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579.7101449275362" y="20.758928571428569"/>
+            <point key="canvasLocation" x="1578.4000000000001" y="20.239880059970016"/>
         </scene>
     </scenes>
     <resources>

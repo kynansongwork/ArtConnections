@@ -11,6 +11,7 @@ target 'ArtConnections' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
+  pod 'SwiftInstagram', '~> 1.1.2'
 
 end
 

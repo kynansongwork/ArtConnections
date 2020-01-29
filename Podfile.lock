@@ -287,6 +287,9 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - SwiftInstagram (1.1.2):
+    - SwiftInstagram/Core (= 1.1.2)
+  - SwiftInstagram/Core (1.1.2)
 
 DEPENDENCIES:
   - AWSCognito (= 2.9.9)
@@ -296,6 +299,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - Firebase/Storage
+  - SwiftInstagram (~> 1.1.2)
 
 SPEC REPOS:
   trunk:
@@ -325,6 +329,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - SwiftInstagram
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -353,7 +358,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 43b8b64263023d4f32caa0b40f4c8bfa3c5f36d8
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  SwiftInstagram: 1579fd6ffb294de557bc47deddbe719fde6e2058
 
-PODFILE CHECKSUM: f136e9da2b9fa565addbc033ad010824bf90ea01
+PODFILE CHECKSUM: a23718eba87689e177884e1a1d6d63c190abd843
 
 COCOAPODS: 1.8.3
