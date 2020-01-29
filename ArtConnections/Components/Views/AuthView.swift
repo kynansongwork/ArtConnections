@@ -20,4 +20,6 @@ class AuthView: KeyboardViewController, StoryboardLoadedViewController {
         view.backgroundColor = UIColor(white: 0, alpha: 0.7)
     }
     
+    @IBAction func dismissSignInView(_ sender: Any) {
+    }
 }

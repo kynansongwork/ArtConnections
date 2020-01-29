@@ -59,7 +59,7 @@ class BaseCoordinator {
         
         bgController.present(controller, animated: true, completion: nil)
     }
-    
+
     final func present(_ child: BaseCoordinator, completion: (() -> Void)? = nil) {
         child.parentCoordinator = self
         self.children.append(child)
