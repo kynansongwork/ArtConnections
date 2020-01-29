@@ -51,6 +51,11 @@ class LoginViewController: KeyboardViewController, StoryboardLoadedViewControlle
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    @objc override func dismissKeyboard() {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+    
     @objc func loginButtonIsEnabled(_ textField: UITextField) {
         if var text = textField.text {
             if text.first == " " {
@@ -76,6 +81,7 @@ class LoginViewController: KeyboardViewController, StoryboardLoadedViewControlle
 
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         if let validEmail = emailTextField.text {
             if viewModel.validateEmail(validEmail) {
                 print("valid email")

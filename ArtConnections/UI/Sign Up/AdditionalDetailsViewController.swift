@@ -30,6 +30,12 @@ class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedV
         [websiteTextField].forEach( {$0?.addTarget(self, action: #selector(continueButtonIsEnabled), for: .editingChanged)} )
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    
     @objc func continueButtonIsEnabled(_ textField: UITextField) {
         if var text = textField.text {
             if text.first == " " {

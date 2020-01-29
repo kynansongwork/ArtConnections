@@ -52,6 +52,7 @@ import Foundation
         underline.translatesAutoresizingMaskIntoConstraints = false
 
         self.rightViewMode = .always
+        self.tintColor = .white
         
         self.addSubview(label)
         self.addSubview(underline)

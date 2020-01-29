@@ -44,6 +44,7 @@ class SignUpViewController: KeyboardViewController, StoryboardLoadedViewControll
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.barTintColor = .black
     }
     
     @objc func continueButtonIsEnabled(_ textField: UITextField) {
