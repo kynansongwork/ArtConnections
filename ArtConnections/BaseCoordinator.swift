@@ -49,10 +49,9 @@ class BaseCoordinator {
     
     func presentCard() {
         overlayWindow = UIWindow(frame: UIScreen.main.bounds)
-        let controller = AuthView.instantiateFromStoryBoard(storyboard: .Main, with: ViewModel())
-        //controller.delegate = self
+        let controller = AuthViewController.instantiateFromStoryBoard(storyboard: .Main, with: ViewModel())
+        controller.delegate = self
         controller.modalPresentationStyle = .overCurrentContext
-        //controller.transitioningDelegate = controller
         let bgController = UIViewController()
         overlayWindow?.rootViewController = bgController
         overlayWindow?.makeKeyAndVisible()
@@ -88,5 +87,12 @@ class BaseCoordinator {
         if let navController = rootViewController as? UINavigationController {
             navController.show(viewController, sender: self)
         }
+    }
+}
+
+extension BaseCoordinator: AuthViewControllerDelegate {
+    func dismissController() {
+        overlayWindow?.rootViewController = nil
+        overlayWindow = nil
     }
 }

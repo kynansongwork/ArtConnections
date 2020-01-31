@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
-class AuthView: KeyboardViewController, StoryboardLoadedViewController {
+protocol AuthViewControllerDelegate: class {
+    func dismissController()
+}
+
+class AuthViewController: KeyboardViewController, StoryboardLoadedViewController {
     var viewModel: ViewModel!
     
-    
     @IBOutlet weak var authView: UIView!
+    weak var delegate: AuthViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +25,6 @@ class AuthView: KeyboardViewController, StoryboardLoadedViewController {
     }
     
     @IBAction func dismissSignInView(_ sender: Any) {
+        self.delegate?.dismissController()
     }
 }
