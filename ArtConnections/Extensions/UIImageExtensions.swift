@@ -17,12 +17,5 @@ extension UIImage {
             return dataString
         }
         return ""
-        
-        
-//        if let strBase64 = imageData?.base64EncodedString(options: .lineLength64Characters) {
-//          return strBase64
-//        }
-//        return ""
-        
     }
 }

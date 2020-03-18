@@ -12,12 +12,10 @@ import UIKit
 class SignUpViewModel: ViewModel {
     
     //May put this in credentials service wrapper
-    let cognitoService: CognitoService
     let validator = ValidationManager()
     var initialPassword: String?
     
-    init(cognitoService: CognitoService) {
-        self.cognitoService = cognitoService
+    override init() {
         super.init()
     }
     
@@ -32,23 +30,12 @@ class SignUpViewModel: ViewModel {
     func saveData(email: String, name: String, specialty: String, password: String) {
         //save and send data
         
-        //save to user defaults
-        let dataFetcher = DataFetcher()
-        let userObject = UserObject(email: email, name: name, specialty: specialty, password: password)
-        dataFetcher.encodeData(userData: userObject)
+        //strip out whitespace
         
-        //save to cognito - move to next viewModel
-//        cognitoService.signUp(email: email, name: name, specialty: specialty, password: password, completion: {(success, user, error) in
-//            if success {
-//                print("Success")
-//            } else {
-//                if let error = error, case CognitoError.userAlreadyExists = error {
-//                    print("User already exists")
-//                }
-//            }
-//        })
         
-        //Move to success when cognito set up
-        coordinator?.transition(SignUpRef.AdditionalDetails, object: userObject)
+        let cleanEmail = email.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        let cleanPassword = password.trimmingCharacters(in: .whitespacesAndNewlines)
+        let userObject = UserObject(email: cleanEmail, name: name, specialty: specialty, password: cleanPassword)
+        self.coordinator?.transition(SignUpRef.AdditionalDetails, object: userObject)
     }
 }

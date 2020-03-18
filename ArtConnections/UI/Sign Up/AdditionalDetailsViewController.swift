@@ -30,6 +30,12 @@ class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedV
         [websiteTextField].forEach( {$0?.addTarget(self, action: #selector(continueButtonIsEnabled), for: .editingChanged)} )
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    
     @objc func continueButtonIsEnabled(_ textField: UITextField) {
         if var text = textField.text {
             if text.first == " " {
@@ -48,9 +54,8 @@ class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedV
     
     @IBAction func completeSignUpTapped(_ sender: Any) {
         if let profileImage = profileImageView.image, let profileText = profileTextInputView.text, let website = websiteTextField.text {
-          viewModel.saveUserDetails(profile: profileText, website: website, image: profileImage)
+            viewModel.saveUserDetails(profile: profileText, website: website, image: profileImage, userObject: viewModel.userObject)
         }
-        print("Save data here")
         dismissKeyboard()
     }
     
@@ -60,7 +65,7 @@ class AdditionalDetailsViewController: KeyboardViewController, StoryboardLoadedV
         profileImageView.addGestureRecognizer(tapRecogniser)
         
         if profileImageView.image == nil {
-            profileImageView?.image = viewModel.s3Service.profileImage
+            profileImageView?.image = viewModel.profileImage
         }
     }
     
@@ -81,7 +86,7 @@ extension AdditionalDetailsViewController: UIImagePickerControllerDelegate, UINa
     func selectImage(sourceType: UIImagePickerController.SourceType) {
         let imagePickerController =  UIImagePickerController()
         imagePickerController.delegate = self
-        imagePickerController.allowsEditing = false
+        imagePickerController.allowsEditing = true
         imagePickerController.sourceType = sourceType
         present(imagePickerController, animated: true, completion: nil)
     }
@@ -120,3 +125,4 @@ extension AdditionalDetailsViewController: UITextViewDelegate {
 }
 
 
+//TODO: Fix constraints for smaller devices

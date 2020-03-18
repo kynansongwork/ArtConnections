@@ -8,35 +8,25 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class AdditionalDetailsViewModel: ViewModel {
     
-    let cognitoService: CognitoService
     var userObject: UserObject
-    var s3Service: S3Service
+    var profileImage = UIImage(named: "placeHolderImage")
+    let firebaseService = FirebaseServices()
     
-    init(cognitoService: CognitoService, userObject: UserObject) {
-        self.cognitoService = cognitoService
+    required init(coordinator: BaseCoordinator, userObject: UserObject) {
         self.userObject = userObject
-        self.s3Service = S3Service()
-        super.init()
+        super.init(coordinator: coordinator)
     }
     
-    func saveUserDetails(profile: String, website: String, image: UIImage) {
+    func saveUserDetails(profile: String, website: String, image: UIImage, userObject: UserObject) {
         
-        //remove when S3 bucket set up
-        let convertedImage = image.convertImageToData()
+        if let currentCoordinator = coordinator {
+            firebaseService.uploadImage(profile: profile, website: website, userObject: userObject, image: image, coordinator: currentCoordinator)
+        }
         
-        //save to cognito - move to next viewModel
-        cognitoService.signUp(email: userObject.email, name: userObject.name, specialty: userObject.specialty, password: userObject.password, profile: profile, website: website, image: convertedImage, completion: {(success, user, error) in
-            if success {
-                print("Success")
-            } else {
-                if let error = error, case CognitoError.userAlreadyExists = error {
-                    print("User already exists")
-                }
-            }
-        })
     }
     
 }

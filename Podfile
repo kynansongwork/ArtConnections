@@ -7,6 +7,10 @@ target 'ArtConnections' do
   pod 'AWSCognito', '2.9.9'
   pod 'AWSCognitoIdentityProvider', '2.9.9'
   pod 'AWSS3', '2.9.9'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
+  pod 'Firebase/Storage'
 
 end
 

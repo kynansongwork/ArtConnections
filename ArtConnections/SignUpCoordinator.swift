@@ -15,11 +15,8 @@ enum SignUpRef: TransitionRef {
 
 class SignUpCoordinator: BaseCoordinator {
     
-    let cognitoService: CognitoService
-    
     required init () {
-        cognitoService = CognitoService()
-        let viewController = SignUpViewController.instantiateFromStoryBoard(storyboard: .Main, with: SignUpViewModel(cognitoService: cognitoService))
+        let viewController = SignUpViewController.instantiateFromStoryBoard(storyboard: .Main, with: SignUpViewModel())
         super.init(rootViewController: viewController)
     }
     
@@ -40,12 +37,11 @@ class SignUpCoordinator: BaseCoordinator {
 extension SignUpCoordinator {
 
     func showAdditionalDetails(userObject: UserObject) {
-        let controller = AdditionalDetailsViewController.instantiateFromStoryBoard(storyboard: .Main, with: AdditionalDetailsViewModel(cognitoService: cognitoService, userObject: userObject))
+        let controller = AdditionalDetailsViewController.instantiateFromStoryBoard(storyboard: .Main, with: AdditionalDetailsViewModel(coordinator: self, userObject: userObject), coordinator: self)
 
         if #available(iOS 13, *) {
           controller.isModalInPresentation = true
         }
-        
         self.show(controller)
     }
 }

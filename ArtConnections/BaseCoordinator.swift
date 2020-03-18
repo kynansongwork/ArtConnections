@@ -39,6 +39,13 @@ class BaseCoordinator {
         fatalError("Tranistion method needs to be added to coordinator subclass")
     }
     
+    func presentAlert(title: String, message: String) {
+        //Temporary alert
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        alertController.presentInOwnWindow(animated: true, completion: nil)
+    }
+    
     final func present(_ child: BaseCoordinator, completion: (() -> Void)? = nil) {
         child.parentCoordinator = self
         self.children.append(child)
