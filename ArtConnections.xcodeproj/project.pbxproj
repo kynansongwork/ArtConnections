@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24317062234137DD00AA4A6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24317061234137DD00AA4A6D /* LoginViewController.swift */; };
+		243B4C3824F5266A00D3601E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 243B4C3724F5266A00D3601E /* GoogleService-Info.plist */; };
 		2443F3E923993D21003A7939 /* FirebaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443F3E823993D21003A7939 /* FirebaseServices.swift */; };
 		2491701B2382BB1C00BA81AE /* UserPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491701A2382BB1C00BA81AE /* UserPool.swift */; };
 		24D6127D23AAAFF200E66D5D /* LoadingWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6127B23AAAFF200E66D5D /* LoadingWindowView.swift */; };
@@ -16,7 +17,6 @@
 		4884F8A883A07B4EF0194DA3 /* Pods_ArtConnections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB9F62522EC278B4ABB7DD1 /* Pods_ArtConnections.framework */; };
 		ED032C7B235603EA00C48203 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED032C7A235603EA00C48203 /* ValidationManager.swift */; };
 		ED032C7E2356193500C48203 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED032C7D2356193500C48203 /* KeyboardViewController.swift */; };
-		ED0417DF23AB73E3008A5C28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED0417DE23AB73E3008A5C28 /* GoogleService-Info.plist */; };
 		ED35C7F523CDEC2D00E600AC /* UIAlertExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED35C7F423CDEC2D00E600AC /* UIAlertExtensions.swift */; };
 		ED48BD1A23E0813300F69F46 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48BD1923E0813300F69F46 /* RoundedButton.swift */; };
 		ED48BD1C23E1888C00F69F46 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48BD1B23E1888C00F69F46 /* UnderlineTextField.swift */; };
@@ -51,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		24317061234137DD00AA4A6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		243B4C3724F5266A00D3601E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2443F3E823993D21003A7939 /* FirebaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServices.swift; sourceTree = "<group>"; };
 		2491701A2382BB1C00BA81AE /* UserPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPool.swift; sourceTree = "<group>"; };
 		24D6127B23AAAFF200E66D5D /* LoadingWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingWindowView.swift; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		EA920CA0C81C0F0ADCCACF2E /* Pods-ArtConnections.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtConnections.debug.xcconfig"; path = "Target Support Files/Pods-ArtConnections/Pods-ArtConnections.debug.xcconfig"; sourceTree = "<group>"; };
 		ED032C7A235603EA00C48203 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		ED032C7D2356193500C48203 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		ED0417DE23AB73E3008A5C28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED35C7F423CDEC2D00E600AC /* UIAlertExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertExtensions.swift; sourceTree = "<group>"; };
 		ED48BD1923E0813300F69F46 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ED48BD1B23E1888C00F69F46 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
@@ -235,8 +235,8 @@
 				EDAF29AC233BAA31007EB1C1 /* Main.storyboard */,
 				EDAF29AF233BAA33007EB1C1 /* Assets.xcassets */,
 				EDAF29B1233BAA33007EB1C1 /* LaunchScreen.storyboard */,
+				243B4C3724F5266A00D3601E /* GoogleService-Info.plist */,
 				EDAF29B4233BAA33007EB1C1 /* Info.plist */,
-				ED0417DE23AB73E3008A5C28 /* GoogleService-Info.plist */,
 			);
 			path = ArtConnections;
 			sourceTree = "<group>";
@@ -363,7 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDAF29B3233BAA33007EB1C1 /* LaunchScreen.storyboard in Resources */,
-				ED0417DF23AB73E3008A5C28 /* GoogleService-Info.plist in Resources */,
+				243B4C3824F5266A00D3601E /* GoogleService-Info.plist in Resources */,
 				EDAF29B0233BAA33007EB1C1 /* Assets.xcassets in Resources */,
 				EDAF29AE233BAA31007EB1C1 /* Main.storyboard in Resources */,
 			);
@@ -600,7 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QZ9QPXJTXV;
+				DEVELOPMENT_TEAM = ZSM2D4RUSA;
 				INFOPLIST_FILE = ArtConnections/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
