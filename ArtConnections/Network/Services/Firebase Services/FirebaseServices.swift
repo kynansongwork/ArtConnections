@@ -23,7 +23,7 @@ class FirebaseServices {
         }
         
         //if let user = Auth.auth().currentUser?.uid {
-            let imageName = UUID().uuidString
+        let imageName = UUID().uuidString
         let imageReference = storage.reference().child(userObject.email + "/profileImages/" + imageName)
             let metaDataForImage = StorageMetadata()
             metaDataForImage.contentType = "image/jpeg"
